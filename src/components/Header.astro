@@ -1,0 +1,32 @@
+---
+const SECTIONS = [
+    {
+        title: "Experiencia",
+        link: "#experiencia"
+    },
+    {
+        title: "Proyectos",
+        link: "#proyectos"
+    },
+    {
+        title: "Sobre mi",
+        link: "#sobre-mi"
+    },
+    {
+        title: "Contacto",
+        link: "mailto:jr.ramirez.varon@gmail.com"
+    },
+]
+---
+
+<header>
+    <nav>
+        {SECTIONS.map(section => (
+            <a href={section.link}>{section.title}</a>
+        ))}
+    </nav>
+</header>
+
+<style>
+
+</style>

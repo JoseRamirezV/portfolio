@@ -1,0 +1,136 @@
+{
+    "basics": {
+      "name": "Jose Ricardo Ramirez Varon",
+      "label": "Desarrollador web",
+      "image": "",
+      "email": "jr.ramirez.varon@gmail.com",
+      "phone": "+57 317-377-7044",
+      "summary": "Ingeniero de sistemas con buen manejo del idioma ingles y experiencia entregando soluciones tecnológicas a diversas compañías del sector educativo usando herramientas como Microsoft Excel y VBA. Mi enfoque actual es el desarrollo web, donde tengo experiencia con tecnologías tales como React, Angular, Node.js y MongoDB",
+      "location": {
+        "postalCode": "764502",
+        "city": "Buenaventura",
+        "region": "Colombia"
+      },
+      "profiles": [{
+        "network": "Linkedin",
+        "username": "JoseRamirezV",
+        "url": "linkedin.com/in/joseramirezv"
+      }]
+    },
+    "work": [{
+      "name": "OMI Security School",
+      "position": "Coordinador de soporte IT",
+      "url": "",
+      "startDate": "2021-04",
+      "endDate": "2023-12",
+      "summary": "Gestioné area tecnológica de empresa con el fin de formar, entrenar, capacitar y certificar a todos los colaboradores de la comunidad Bonaverense en la protección de las instalaciones portuarias  ",
+      "highlights": [
+        "Automatice todos los procesos de creación y envío de archivos relacionados con la base de datos minimizando en un 90% el tiempo requerido para registrar un curso"
+      ]
+    }],
+    "volunteer": [{
+      "organization": "Centro de entrenamiento para trabajo seguro en alturas CDETSA",
+      "position": "Soporte técnico",
+      "url": "https://cdetsa.com/",
+      "startDate": "2022-06",
+      "endDate": "2023-12",
+      "summary": "Ofrecí apoyo en la optimización de la base de datos empresarial para la eficiente certificación de los usuarios de este centro.",
+      "highlights": [
+        ""
+      ]
+    }],
+    "education": [{
+      "institution": "Universidad del pacifico",
+      "url": "http://unipacifico.edu.co/",
+      "area": "Ingeniería de sistemas",
+      "startDate": "2017",
+      "endDate": "2023"
+    }],
+    "certificates": [{
+      "name": "EF SET 50 (C2 Proficient) ",
+      "date": "2023-05",
+      "issuer": "EF Standard English Test (EF SET)",
+      "url": "https://cert.efset.org/NF2AEd"
+    }],
+    "publications": [{
+      "name": "Insights. Tecnología, Sociedad y Educación: Institución Educativa Simón Bolívar",
+      "publisher": "Universidad del pacifico - Grupo de Investigación e innovación tecnológica",
+      "releaseDate": "2023-11",
+      "url": "https://gi2t.org/publicaciones"
+    }],
+    "skills": [
+      {
+        "name": "Frontend",
+        "keywords": [
+          "HTML",
+          "CSS",
+          "SASS",
+          "Chakra UI",
+          "JavaScript",
+          "ReactJs",
+          "Angular"
+        ]
+      },
+      {
+        "name": "Backend",
+        "keywords": [
+          "Node.js",
+          "Express",
+          "PHP",
+          "MySQL",
+          "MongoDB"
+        ]
+      },
+      {
+        "name": "Herramientas",
+        "keywords": [
+          "VSCode",
+          "GitHub",
+          "npm"
+        ]
+      },
+      {
+        "name": "General",
+        "keywords": [
+          "Microsoft Excel",
+          "VBA"
+        ]
+      }
+    ],
+    "languages": [
+      {
+        "language": "Español",
+        "fluency": "Nativo"
+      },
+      {
+        "language": "English",
+        "fluency": "C2"
+      }
+    ],
+    "interests": [{
+      "name": "Wildlife",
+      "keywords": [
+        "Ferrets",
+        "Unicorns"
+      ]
+    }],
+    "references": [{
+      "name": "Jose Ricardo Ramirez Zapata",
+      "reference": "Gerente, OMI Security School S.A.S"
+    }],
+    "projects": [{
+      "name": "Organic & Chemical Landing page",
+      "startDate": "2023-11",
+      "endDate": "2024-02",
+      "description": "Landing page para nueva empresa de fertilizantes y abonos",
+      "technologies": [
+        "ReactJs",
+        "Chakra Ui",
+        "Embla carousel"
+      ],
+      "highlights": [
+        "Won award at AIHacks 2016"
+      ],
+      "url": "https://joseramirezv.github.io/organic-chemical/"
+    }]
+  }
