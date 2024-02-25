@@ -1,0 +1,18 @@
+---
+import Download from "@/icons/Download.astro";
+import { work } from "@/resume.json";
+import ExperienceItem from "./ExperienceItem.astro";
+---
+
+<div class="relative ps-4">
+  <ol class="mt-10 border-s border-gray-200 dark:border-gray-700">
+    {
+      work.length > 0 &&
+        work.map((experience, i) => (
+          <li class="mb-10 ms-6">
+            <ExperienceItem {...experience} id={`exp-${i}`} />
+          </li>
+        ))
+    }
+  </ol>
+</div>

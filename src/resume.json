@@ -4,29 +4,51 @@
       "label": "Desarrollador web",
       "image": "",
       "email": "jr.ramirez.varon@gmail.com",
+      "available": true,
       "phone": "+57 317-377-7044",
-      "summary": "Ingeniero de sistemas con buen manejo del idioma ingles y experiencia entregando soluciones tecnológicas a diversas compañías del sector educativo usando herramientas como Microsoft Excel y VBA. Mi enfoque actual es el desarrollo web, donde tengo experiencia con tecnologías tales como React, Angular, Node.js y MongoDB",
+      "summary": "Ingeniero de sistemas:con buen manejo del idioma ingles y experiencia con tecnologías como:React, Angular, Node.js y MongoDB",
       "location": {
         "postalCode": "764502",
         "city": "Buenaventura",
         "region": "Colombia"
       },
-      "profiles": [{
-        "network": "Linkedin",
-        "username": "JoseRamirezV",
-        "url": "linkedin.com/in/joseramirezv"
-      }]
+      "profiles": [
+        {
+          "network": "Contáctame",
+          "username": "Jose Ricardo Ramirez Varon",
+          "url": "mailto:jr.ramirez.varon@gmail.com"
+        },
+        {
+          "network": "LinkedIn",
+          "username": "JoseRamirezV",
+          "url": "https://www.linkedin.com/in/joseramirezv"
+        },
+        {
+          "network": "GitHub",
+          "username": "JoseRamirezV",
+          "url": "https://github.com/JoseRamirezV"
+        }
+      ]
     },
     "work": [{
-      "name": "OMI Security School",
+      "company": "OMI Security School",
       "position": "Coordinador de soporte IT",
-      "url": "",
-      "startDate": "2021-04",
-      "endDate": "2023-12",
-      "summary": "Gestioné area tecnológica de empresa con el fin de formar, entrenar, capacitar y certificar a todos los colaboradores de la comunidad Bonaverense en la protección de las instalaciones portuarias  ",
+      "url": null,
+      "startDate": "Abril 2021",
+      "endDate": "Diciembre 2023",
+      "summary": "Gestioné el area tecnológica de esta empresa cuyo fin es formar, entrenar, capacitar y certificar a todos los colaboradores de la comunidad Bonaverense en la protección de las instalaciones portuarias  ",
       "highlights": [
-        "Automatice todos los procesos de creación y envío de archivos relacionados con la base de datos minimizando en un 90% el tiempo requerido para registrar un curso"
+        "Automaticé todos los procesos de creación y envío de archivos relacionados con la base de datos minimizando en un :90%: el tiempo requerido para registrar un curso"
       ]
+    },
+    {
+      "company": "Centro de entrenamiento para trabajo seguro en alturas CDETSA",
+      "position": "Soporte técnico",
+      "url": "https://cdetsa.com/",
+      "startDate": "Junio 2022",
+      "endDate": "Diciembre 2023",
+      "summary": "Ofrecí apoyo en la optimización de la base de datos empresarial para la eficiente certificación de los usuarios de este centro.",
+      "highlights": []
     }],
     "volunteer": [{
       "organization": "Centro de entrenamiento para trabajo seguro en alturas CDETSA",

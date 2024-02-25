@@ -1,32 +1,58 @@
 ---
+import Moon from "@/icons/Moon.astro";
+import Experience from "@/icons/Briefcase.astro";
+import About_me from "@/icons/About_me.astro";
+import Projects from "@/icons/Projects.astro";
+import Contact from "@/icons/Contact.astro";
+
 const SECTIONS = [
-    {
-        title: "Experiencia",
-        link: "#experiencia"
-    },
-    {
-        title: "Proyectos",
-        link: "#proyectos"
-    },
-    {
-        title: "Sobre mi",
-        link: "#sobre-mi"
-    },
-    {
-        title: "Contacto",
-        link: "mailto:jr.ramirez.varon@gmail.com"
-    },
-]
+  {
+    title: "Experiencia",
+    link: "#experiencia",
+    Icon: Experience,
+  },
+  {
+    title: "Proyectos",
+    link: "#proyectos",
+    Icon: About_me,
+  },
+  {
+    title: "Sobre mi",
+    link: "#sobre-mi",
+    Icon: Projects,
+  },
+  {
+    title: "Contacto",
+    link: "mailto:jr.ramirez.varon@gmail.com",
+    Icon: Contact,
+  },
+];
 ---
 
-<header>
-    <nav>
-        {SECTIONS.map(section => (
-            <a href={section.link}>{section.title}</a>
-        ))}
-    </nav>
+<header
+  class="fixed top-0 sm:right-0 z-10 sm:h-full w-full sm:w-auto mx-auto mt-2 sm:mt-0 flex items-center justify-center"
+>
+  <nav
+    class="flex flex-wrap sm:flex-col items-center justify-center text-sm sm:text-base font-medium px-3 sm:ps-0 sm:pe-2 sm:py-3 rounded-full text-gray-600 dark:text-gray-200 sm:bg-white"
+  >
+    {
+      SECTIONS.map(({ link, title, Icon }) => (
+        <a
+          href={link}
+          class="group relative flex items-center p-2 sm:p-3 transition hover:text-blue-500 dark:hover:text-blue-400"
+        >
+          <p class="sm:whitespace-nowrap transition sm:translate-x-36 sm:group-hover:translate-x-0 sm:absolute sm:-z-10 sm:right-full sm:pe-1 sm:text-base">
+            {title}
+          </p>
+          <Icon class="hidden sm:block sm:size-5" />
+        </a>
+      ))
+    }
+    <button
+      class="p-3 transition hover:scale-125 hover:text-blue-500 dark:hover:text-blue-400"
+      ><Moon class="size-4 sm:size-5" />
+    </button>
+  </nav>
+
+  <style></style>
 </header>
-
-<style>
-
-</style>
