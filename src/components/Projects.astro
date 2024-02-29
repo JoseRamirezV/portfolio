@@ -1,0 +1,10 @@
+---
+import { projects } from '@/resume.json';
+import ProjectCard from './ProjectCard.astro';
+---
+
+<div class="flex flex-col mb-10">
+    {projects.map(project => (
+        <ProjectCard {...project}/>
+    ))}
+</div>

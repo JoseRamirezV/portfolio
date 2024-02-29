@@ -4,7 +4,7 @@ const { company, position, url, startDate, endDate, summary, highlights, id } =
 ---
 
 <span
-  class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full start-1 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900"
+  class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full start-1 dark:ring-gray-900 dark:bg-blue-900"
 >
   <svg
     class="size-2.5 text-blue-800 dark:text-blue-300"
@@ -18,7 +18,7 @@ const { company, position, url, startDate, endDate, summary, highlights, id } =
     ></path>
   </svg>
 </span>
-<h3 class="flex items-center text-xl font-bold text-blue-500 dark:text-white">
+<h3 class="flex items-center text-2xl font-bold text-blue-500">
   {position}
   {
     !endDate && (
@@ -28,29 +28,28 @@ const { company, position, url, startDate, endDate, summary, highlights, id } =
     )
   }
 </h3>
-<span class="text-lg font-medium text-gray-500">{company}</span>
+<span class="text-lg font-medium text-gray-600 dark:text-white">{company}</span>
 <time
-  class="block mt-1 mb-2 text-xs leading-none text-gray-400 dark:text-gray-500"
+  class="block mt-1 mb-2 text-xs leading-none text-gray-500 dark:text-gray-300"
 >
-  {`${startDate} - ${endDate}`}
+  {`${startDate} - ${endDate ?? 'Presente'}`}
 </time>
-<p class="mb-4 font-medium text-gray-600 dark:text-gray-400 ">
+<p class="mb-4 text-gray-600 dark:text-white ">
   {summary}
   {
     highlights.length > 0 && (
-      <>
-        <ul class="max-w-2xl text-gray-500">
+        <ul class="max-w-2xl text-gray-500 dark:text-gray-300">
           {highlights.map((highlight) => {
             const [content, percentage, ...rest] = highlight.split(':');
             return (
-              <li class="flex gap-2">
+              <li class="flex items-start gap-2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke-width="3.5"
                   stroke="currentColor"
-                  class="w-16 h-7 sm:size-7 text-blue-500"
+                  class="max-sm:w-12 h-6 text-blue-500"
                 >
                   <path
                     stroke-linecap="round"
@@ -68,7 +67,6 @@ const { company, position, url, startDate, endDate, summary, highlights, id } =
             );
           })}
         </ul>
-      </>
     )
   }
 </p>
@@ -76,15 +74,15 @@ const { company, position, url, startDate, endDate, summary, highlights, id } =
   url && (
     <a
       href={url}
-      class="inline-flex items-center gap-1 px-4 py-2 text-sm font-medium text-gray-600 bg-white border border-gray-200 rounded-lg hover:bg-sky-50 hover:text-blue-500 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+      class="inline-flex items-center gap-1 px-4 py-2 text-sm font-medium text-gray-600 bg-white border border-gray-200 rounded-lg hover:bg-sky-50 hover:text-blue-500 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-600/80"
     >
       Ir a sitio
       <svg
-        class="size-3 text-blue-500"
+        class="size-3 text-blue-500 dark:text-blue-400"
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
-        viewBox="0 0 20 20"
-        stroke-width="3"
+        viewBox="0 0 24 24"
+        stroke-width="5"
         stroke="currentColor"
       >
         <path

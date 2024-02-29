@@ -1,36 +1,37 @@
 {
-    "basics": {
-      "name": "Jose Ricardo Ramirez Varon",
-      "label": "Desarrollador web",
-      "image": "",
-      "email": "jr.ramirez.varon@gmail.com",
-      "available": true,
-      "phone": "+57 317-377-7044",
-      "summary": "Ingeniero de sistemas:con buen manejo del idioma ingles y experiencia con tecnologías como:React, Angular, Node.js y MongoDB",
-      "location": {
-        "postalCode": "764502",
-        "city": "Buenaventura",
-        "region": "Colombia"
-      },
-      "profiles": [
-        {
-          "network": "Contáctame",
-          "username": "Jose Ricardo Ramirez Varon",
-          "url": "mailto:jr.ramirez.varon@gmail.com"
-        },
-        {
-          "network": "LinkedIn",
-          "username": "JoseRamirezV",
-          "url": "https://www.linkedin.com/in/joseramirezv"
-        },
-        {
-          "network": "GitHub",
-          "username": "JoseRamirezV",
-          "url": "https://github.com/JoseRamirezV"
-        }
-      ]
+  "basics": {
+    "name": "Jose Ricardo Ramirez Varon",
+    "label": "Desarrollador web",
+    "image": "",
+    "email": "jr.ramirez.varon@gmail.com",
+    "available": true,
+    "phone": "+57 317-377-7044",
+    "summary": "Ingeniero de sistemas:con buen manejo del idioma ingles y experiencia con tecnologías como:React, Angular, Node.js y MongoDB",
+    "location": {
+      "postalCode": "764502",
+      "city": "Buenaventura",
+      "region": "Colombia"
     },
-    "work": [{
+    "profiles": [
+      {
+        "network": "Contáctame",
+        "username": "Jose Ricardo Ramirez Varon",
+        "url": "mailto:jr.ramirez.varon@gmail.com"
+      },
+      {
+        "network": "LinkedIn",
+        "username": "JoseRamirezV",
+        "url": "https://www.linkedin.com/in/joseramirezv"
+      },
+      {
+        "network": "GitHub",
+        "username": "JoseRamirezV",
+        "url": "https://github.com/JoseRamirezV"
+      }
+    ]
+  },
+  "work": [
+    {
       "company": "OMI Security School",
       "position": "Coordinador de soporte IT",
       "url": null,
@@ -49,8 +50,10 @@
       "endDate": "Diciembre 2023",
       "summary": "Ofrecí apoyo en la optimización de la base de datos empresarial para la eficiente certificación de los usuarios de este centro.",
       "highlights": []
-    }],
-    "volunteer": [{
+    }
+  ],
+  "volunteer": [
+    {
       "organization": "Centro de entrenamiento para trabajo seguro en alturas CDETSA",
       "position": "Soporte técnico",
       "url": "https://cdetsa.com/",
@@ -60,99 +63,117 @@
       "highlights": [
         ""
       ]
-    }],
-    "education": [{
+    }
+  ],
+  "education": [
+    {
       "institution": "Universidad del pacifico",
       "url": "http://unipacifico.edu.co/",
       "area": "Ingeniería de sistemas",
       "startDate": "2017",
       "endDate": "2023"
-    }],
-    "certificates": [{
+    }
+  ],
+  "certificates": [
+    {
       "name": "EF SET 50 (C2 Proficient) ",
       "date": "2023-05",
       "issuer": "EF Standard English Test (EF SET)",
       "url": "https://cert.efset.org/NF2AEd"
-    }],
-    "publications": [{
+    }
+  ],
+  "publications": [
+    {
       "name": "Insights. Tecnología, Sociedad y Educación: Institución Educativa Simón Bolívar",
       "publisher": "Universidad del pacifico - Grupo de Investigación e innovación tecnológica",
       "releaseDate": "2023-11",
       "url": "https://gi2t.org/publicaciones"
-    }],
-    "skills": [
-      {
-        "name": "Frontend",
-        "keywords": [
-          "HTML",
-          "CSS",
-          "SASS",
-          "Chakra UI",
-          "JavaScript",
-          "ReactJs",
-          "Angular"
-        ]
-      },
-      {
-        "name": "Backend",
-        "keywords": [
-          "Node.js",
-          "Express",
-          "PHP",
-          "MySQL",
-          "MongoDB"
-        ]
-      },
-      {
-        "name": "Herramientas",
-        "keywords": [
-          "VSCode",
-          "GitHub",
-          "npm"
-        ]
-      },
-      {
-        "name": "General",
-        "keywords": [
-          "Microsoft Excel",
-          "VBA"
-        ]
-      }
-    ],
-    "languages": [
-      {
-        "language": "Español",
-        "fluency": "Nativo"
-      },
-      {
-        "language": "English",
-        "fluency": "C2"
-      }
-    ],
-    "interests": [{
-      "name": "Wildlife",
-      "keywords": [
-        "Ferrets",
-        "Unicorns"
+    }
+  ],
+  "skillSet": [
+    {
+      "category": "Frontend",
+      "skills": [
+        "HTML",
+        "CSS",
+        "Sass",
+        "Chakra-Ui",
+        "Tailwind",
+        "JavaScript",
+        "React",
+        "Angular"
       ]
-    }],
-    "references": [{
+    },
+    {
+      "category": "Backend",
+      "skills": [
+        "Node.js",
+        "Express",
+        "PHP",
+        "MySQL",
+        "MongoDB"
+      ]
+    },
+    {
+      "category": "Herramientas",
+      "skills": [
+        "VSCode",
+        "GitHub",
+        "npm"
+      ]
+    },
+    {
+      "category": "General",
+      "skills": [
+        "Excel",
+        "VBA"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "Español",
+      "fluency": "Nativo"
+    },
+    {
+      "language": "English",
+      "fluency": "C2"
+    }
+  ],
+  "about": {
+    "points": [
+      "Me llamo Miguel Ángel pero mis amigos me llaman midu. Empecé en la programación con un Amstrad, tenía 10 años. Actualmente estoy liderando equipos de desarrollo en multinacionales.",
+      "Algunos de mis éxitos incluyen colaborar con Mozilla para el desarrollo de las primeras apps en su sistema FirefoxOS. Aunque hoy está desaparecido fue un gran avance en el mundo del desarrollo web.",
+      "Como creador de <strong>contenido</strong>, cuento con el canal de habla hispana más visto del mundo en la categoría de Software & Game Development en Twitch. Mi objetivo es mejorar la empleabilidad de la comunidad hispana y el acceso a contenido de calidad"
+    ],
+    "image": "https://as1.ftcdn.net/v2/jpg/03/46/83/96/1000_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg"
+  },
+  "references": [
+    {
       "name": "Jose Ricardo Ramirez Zapata",
       "reference": "Gerente, OMI Security School S.A.S"
-    }],
-    "projects": [{
+    }
+  ],
+  "projects": [
+    {
       "name": "Organic & Chemical Landing page",
+      "description": "Landing page para nueva empresa de fertilizantes y abonos",
+      "image": "/projects/Chemical.webp",
       "startDate": "2023-11",
       "endDate": "2024-02",
-      "description": "Landing page para nueva empresa de fertilizantes y abonos",
       "technologies": [
-        "ReactJs",
-        "Chakra Ui",
-        "Embla carousel"
+        {
+          "technology": "ReactJs"
+        },
+        {
+          "technology": "Chakra-Ui"
+        }
       ],
       "highlights": [
         "Won award at AIHacks 2016"
       ],
-      "url": "https://joseramirezv.github.io/organic-chemical/"
-    }]
-  }
+      "url": "https://joseramirezv.github.io/organic-chemical/",
+      "repository": "https://github.com/JoseRamirezV/organic-chemical"
+    }
+  ]
+}

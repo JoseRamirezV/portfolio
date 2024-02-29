@@ -1,0 +1,65 @@
+---
+const { category, skills } = Astro.props;
+import Angular from "@/icons/Angular.astro";
+import ChakraUi from "@/icons/ChakraUi.astro";
+import CSS from "@/icons/CSS.astro";
+import Excel from "@/icons/Excel.astro";
+import Express from "@/icons/Express.astro";
+import GitHub from "@/icons/GitHub.astro";
+import HTML from "@/icons/HTML.astro";
+import JavaScript from "@/icons/JavaScript.astro";
+import MongoDB from "@/icons/MongoDB.astro";
+import MySQL from "@/icons/MySQL.astro";
+import NodeJs from "@/icons/NodeJs.astro";
+import Npm from "@/icons/Npm.astro";
+import PHP from "@/icons/PHP.astro";
+import React from "@/icons/React.astro";
+import Sass from "@/icons/Sass.astro";
+import Tailwind from "@/icons/Tailwind.astro";
+import VBA from "@/icons/VBA.astro";
+import VSCode from "@/icons/VSCode.astro";
+
+const ICONS = {
+  Angular,
+  "Chakra-Ui": ChakraUi,
+  CSS,
+  Excel,
+  Express,
+  GitHub,
+  HTML,
+  JavaScript,
+  MongoDB,
+  MySQL,
+  "Node.js": NodeJs,
+  npm: Npm,
+  PHP,
+  React,
+  Sass,
+  Tailwind,
+  VBA,
+  VSCode,
+};
+---
+
+<article
+  class="flex flex-col items-center gap-y-8 p-10 rounded-2xl shadow-xl dark:bg-gradient-to-tl dark:from-slate-950 dark:to-zinc-900 transition"
+>
+  <h4
+    class="text-transparent bg-clip-text bg-gradient-to-br dark:bg-gradient-to-tl from-sky-600 to-sky-400 text-4xl font-bold"
+  >
+    {category}
+  </h4>
+  <ul class="grid grid-cols-3 gap-5 p-5 w-full">
+    {
+      skills.map((skill) => {
+        const Icon = ICONS[skill];
+        return (
+          <li class="flex flex-col gap-2 items-center text-gray-600 dark:text-white">
+            <Icon class="size-10 sm:max-md:size-12 lg:size-12 dark:fill-white" />
+            <span class="font-medium max-md:text-sm">{skill}</span>
+          </li>
+        );
+      })
+    }
+  </ul>
+</article>

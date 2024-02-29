@@ -1,0 +1,33 @@
+---
+const SECTIONS = [
+  {
+    title: "Experiencia",
+    link: "#experiencia",
+  },
+  {
+    title: "Proyectos",
+    link: "#proyectos",
+  },
+  {
+    title: "Contacto",
+    link: "mailto:jr.ramirez.varon@gmail.com",
+  },
+];
+---
+
+<div
+  class="flex justify-between font-medium text-sm text-gray-700 dark:text-gray-300 rounded-lg px-6 py-4 bg-gray-100 dark:bg-white/10 mx-auto mb-10"
+>
+  <a href="inicio" class=" hover:text-slate-400 transition">Inicio</a>
+  <ul class="flex gap-5">
+    {
+      SECTIONS.map(({ title, link }) => (
+        <li>
+          <a href={link} class=" hover:text-slate-400 transition">
+            {title}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</div>

@@ -1,0 +1,17 @@
+---
+import { about } from "@/resume.json";
+const { points, image } = about;
+---
+
+<div class="flex flex-col-reverse lg:flex-row items-center gap-10">
+  <div class="flex flex-col gap-5 dark:text-white text-lg">
+    {
+        points.map((point) => (
+          <p set:html={point} />
+        ))
+      }
+  </div>
+  <div class="my-auto max-w-xs">
+      <img src={image} alt="Foto de Jose Ricardo" class="aspect-square rounded-xl" />
+  </div>
+</div>
