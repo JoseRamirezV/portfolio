@@ -42,7 +42,7 @@ const TECH_ICONS = {
                 </span>
               </li>
             );
-          })
+          }) 
         }
       </ul>
       <p class="font-medium text-gray-700 dark:text-gray-300">
@@ -54,7 +54,7 @@ const TECH_ICONS = {
     >
       {
         repository && (
-          <a href={repository} class="active:bg-black hover:border-gray-800 transition-all">
+          <a href={repository} class="md:hover:-translate-y-1 md:hover:shadow-xl active:bg-black hover:border-gray-800 transition-all">
             <GitHub class="size-4" />
             GitHub
           </a>
@@ -62,7 +62,7 @@ const TECH_ICONS = {
       }
       {
         url && (
-          <a href={url} class="active:bg-black hover:border-gray-800 transition-all">
+          <a href={url} class="md:hover:-translate-y-1 md:hover:shadow-xl active:bg-black hover:border-gray-800 transition-all">
             <Link class="size-4" />
             Preview
           </a>

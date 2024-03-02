@@ -4,5 +4,9 @@ import SkillsCard from './SkillsCard.astro';
 ---
 
 <div class="grid md:grid-cols-2 md:grid-rows-2 gap-10">
-  {skillSet.map((skills) => <SkillsCard {...skills}/>)}
+  {skillSet.map((skills) => (
+    <span class="*:rounded-2xl dark:*:bg-gradient-to-br dark:*:from-slate-900 dark:*:via-zinc-900 dark:*:to-slate-900 transition *:shadow-xl dark:*:shadow-[0px_0px_50px_-10px_rgba(30,41,59,0.9)]">
+      <SkillsCard {...skills}/>
+      </span>
+  ))}
 </div>

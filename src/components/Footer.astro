@@ -16,14 +16,21 @@ const SECTIONS = [
 ---
 
 <div
-  class="flex justify-between font-medium text-sm text-gray-700 dark:text-gray-300 rounded-lg px-6 py-4 bg-gray-100 dark:bg-white/10 mx-auto mb-10"
+  class="flex items-center justify-between mt-16 mb-5 font-medium text-sm text-gray-700 dark:text-gray-300 rounded-lg px-6 py-4 bg-gray-100 dark:bg-white/10 mx-auto w-full max-w-sm sm:max-w-xl md:max-w-2xl lg:max-w-4xl"
 >
-  <a href="inicio" class=" hover:text-slate-400 transition">Inicio</a>
-  <ul class="flex gap-5">
+  <span
+    >Basado en
+    <a
+      href="https://porfolio.dev/"
+      class="text-blue-500 dark:text-blue-300 hover:underline hover:text-blue-400 transition"
+      >portfolio.dev</a
+    ></span
+  >
+  <ul class="flex max-sm:flex-col gap-5">
     {
       SECTIONS.map(({ title, link }) => (
         <li>
-          <a href={link} class=" hover:text-slate-400 transition">
+          <a href={link} class=" hover:text-blue-500 hover:underline dark:hover:text-blue-500 transition">
             {title}
           </a>
         </li>
