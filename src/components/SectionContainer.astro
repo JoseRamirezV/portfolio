@@ -14,7 +14,7 @@ const { class: className, id } = Astro.props;
 >
   <slot />
 </section>
-<script>
+<script is:inline>
   if (matchMedia("(min-width: 640px)").matches) {
     const sections = document.querySelectorAll("section");
     const navItems = document.querySelectorAll("#nav-bar a");
@@ -24,12 +24,10 @@ const { class: className, id } = Astro.props;
         if (entry.isIntersecting) {
           navItems.forEach((item) => {
             if (item.getAttribute("aria-label") === entry.target.id) {
-              item.lastElementChild.classList.remove("lg:scale-0");
               item.classList.add("lg:text-blue-500");
               item.classList.add("lg:dark:text-blue-400");
               item.firstElementChild.classList.add("lg:scale-125");
             } else {
-              item.lastElementChild.classList.add("lg:scale-0");
               item.classList.remove("lg:text-blue-500");
               item.classList.remove("lg:dark:text-blue-400");
               item.firstElementChild.classList.remove("lg:scale-125");
@@ -42,7 +40,7 @@ const { class: className, id } = Astro.props;
     const observer = new IntersectionObserver(onChange, {
       root: null,
       rootMargin: "0px",
-      threshold: 0.5,
+      threshold: 0.4,
     });
 
     sections.forEach((section) => {

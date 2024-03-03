@@ -12,6 +12,18 @@
       "city": "Buenaventura",
       "region": "Colombia"
     },
+    "languages": [
+      {
+        "language": "Español",
+        "fluency": "Nativo"
+      },
+      {
+        "language": "English",
+        "fluency": "C2",
+        "certificate": "https://cert.efset.org/NF2AEd",
+        "organization": "EF Standard English Test (EF SET)"
+      }
+    ],
     "profiles": [
       {
         "network": "Contáctame",
@@ -39,7 +51,14 @@
       "endDate": "Diciembre 2023",
       "summary": "Gestioné el area tecnológica de esta empresa cuyo fin es formar, entrenar, capacitar y certificar a todos los colaboradores de la comunidad Bonaverense en la protección de las instalaciones portuarias  ",
       "highlights": [
-        "Automaticé todos los procesos de creación y envío de archivos relacionados con la base de datos minimizando en un :90%: el tiempo requerido para registrar un curso"
+        {
+          "content": "Automaticé todos los procesos de creación y envío de archivos relacionados con la base de datos minimizando en un 90% el tiempo requerido cumplir con su ciclo laboral",
+          "highlight": "minimizando en un 90%"
+        },
+        {
+          "content": "Eliminé el riesgo de falsificación de los certificados mediante la actualización semanal a multiples puertos mediante una hoja de calculo generada automáticamente.",
+          "highlight": "Eliminé el riesgo de falsificación de los certificados"
+        }
       ]
     },
     {
@@ -52,34 +71,13 @@
       "highlights": []
     }
   ],
-  "volunteer": [
-    {
-      "organization": "Centro de entrenamiento para trabajo seguro en alturas CDETSA",
-      "position": "Soporte técnico",
-      "url": "https://cdetsa.com/",
-      "startDate": "2022-06",
-      "endDate": "2023-12",
-      "summary": "Ofrecí apoyo en la optimización de la base de datos empresarial para la eficiente certificación de los usuarios de este centro.",
-      "highlights": [
-        ""
-      ]
-    }
-  ],
   "education": [
     {
       "institution": "Universidad del pacifico",
-      "url": "http://unipacifico.edu.co/",
+      "url": "http://www.unipacifico.edu.co/",
       "area": "Ingeniería de sistemas",
       "startDate": "2017",
       "endDate": "2023"
-    }
-  ],
-  "certificates": [
-    {
-      "name": "EF SET 50 (C2 Proficient) ",
-      "date": "2023-05",
-      "issuer": "EF Standard English Test (EF SET)",
-      "url": "https://cert.efset.org/NF2AEd"
     }
   ],
   "publications": [
@@ -90,7 +88,7 @@
       "url": "https://gi2t.org/publicaciones"
     }
   ],
-  "skillSet": [
+  "knowledge": [
     {
       "category": "Frontend",
       "skills": [
@@ -119,7 +117,8 @@
       "skills": [
         "VSCode",
         "GitHub",
-        "npm"
+        "npm",
+        "Postman"
       ]
     },
     {
@@ -130,21 +129,20 @@
       ]
     }
   ],
-  "languages": [
-    {
-      "language": "Español",
-      "fluency": "Nativo"
-    },
-    {
-      "language": "English",
-      "fluency": "C2"
-    }
-  ],
   "about": {
     "points": [
-      "Me llamo Miguel Ángel pero mis amigos me llaman midu. Empecé en la programación con un Amstrad, tenía 10 años. Actualmente estoy liderando equipos de desarrollo en multinacionales.",
-      "Algunos de mis éxitos incluyen colaborar con Mozilla para el desarrollo de las primeras apps en su sistema FirefoxOS. Aunque hoy está desaparecido fue un gran avance en el mundo del desarrollo web.",
-      "Como creador de <strong>contenido</strong>, cuento con el canal de habla hispana más visto del mundo en la categoría de Software & Game Development en Twitch. Mi objetivo es mejorar la empleabilidad de la comunidad hispana y el acceso a contenido de calidad"
+      {
+        "content": "Mi nombre es Jose Ricardo, aunque mis amigos me llaman πk, me gradué como Ingeniero en sistemas en 2023. Desde entonces he continuado brindando completo soporte técnico en el area de coordinación académica de OMI Security School.",
+        "highlights":["me gradué como Ingeniero en sistemas en 2023."]
+      },
+      {
+        "content": "Entre mis logros destaco que logré optimizar el funcionamiento de multiples empresas locales que usan Excel como su base de datos, usando VBA para automatizar sus procesos diarios.",
+        "highlights": ["logré optimizar el funcionamiento de multiples empresas locales"]
+      },
+      {
+        "content": "Ademas, cuento con experiencia en desarrollo web, y uno de mis objetivos es usar este conocimiento para mejorar los sitios web de empresas locales donde he podido detectar cosas a mejorar.",
+        "highlights": ["uno de mis objetivos es usar este conocimiento para mejorar los sitios web de empresas locales"]
+      }
     ],
     "image": "https://as1.ftcdn.net/v2/jpg/03/46/83/96/1000_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg"
   },

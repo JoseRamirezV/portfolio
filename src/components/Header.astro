@@ -4,7 +4,7 @@ import Experience from "@/icons/Briefcase.astro";
 import Code from "@/icons/Code.astro";
 import Contact from "@/icons/Contact.astro";
 import UserCode from "@/icons/UserCode.astro";
-import About_me from "@/icons/UserHeart.astro";
+import UserCheck from "@/icons/UserCheck.astro";
 import ThemeToggle from "./ThemeToggle.astro";
 
 const SECTIONS = [
@@ -21,16 +21,16 @@ const SECTIONS = [
     Icon: Code,
   },
   {
-    title: "Tecnologías",
-    link: "#skills",
-    label: "skills",
+    title: "Conocimientos",
+    link: "#conocimientos",
+    label: "conocimientos",
     Icon: UserCode,
   },
   {
     title: "Sobre mi",
     link: "#sobre-mi",
     label: "sobre-mi",
-    Icon: About_me,
+    Icon: UserCheck,
   },
   {
     title: "Contacto",
@@ -41,7 +41,9 @@ const SECTIONS = [
 ];
 ---
 
-<header class="fixed top-0 lg:right-0 z-10 lg:h-full max-lg:w-full flex items-center">
+<header
+  class="fixed top-0 lg:right-0 z-10 lg:h-full max-lg:w-full flex items-center"
+>
   <div class="relative flex w-full justify-end m-3 md:m-10 lg:m-0">
     <span
       id="burger-container"
@@ -57,7 +59,7 @@ const SECTIONS = [
         SECTIONS.map(({ link, title, Icon, label }) => (
           <a
             href={link}
-            class="dark:max-lg:hover:bg-slate-700 max-lg:hover:bg-gray-300 group relative flex lg:flex-row-reverse items-center gap-x-2 p-3 lg:px-5 2xl:p-6 w-full rounded-lg lg:hover:text-blue-500 lg:dark:hover:text-blue-400"
+            class="dark:max-lg:hover:bg-slate-700 max-lg:hover:bg-gray-300 group relative flex lg:flex-row-reverse items-center gap-x-2 p-3 lg:px-5 2xl:p-6 w-full font-semibold rounded-lg lg:hover:text-blue-500 lg:dark:hover:text-blue-400"
             aria-label={label}
           >
             <Icon class="transition size-4 lg:size-5 2xl:size-8 lg:group-hover:scale-125" />
@@ -99,8 +101,8 @@ const SECTIONS = [
 </script>
 
 <style>
-  .open{
-    @apply lg:scale-100
+  .open {
+    @apply lg:scale-100;
   }
   #burger-container {
     animation: nav-shadown 1s linear both;

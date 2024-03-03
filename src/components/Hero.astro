@@ -1,42 +1,32 @@
 ---
-import SocialPill from "./SocialPill.astro";
-import GitHub from "@/icons/GitHub.astro";
-import LinkedIn from "@/icons/LinkedIn.astro";
-import Contáctame from "@/icons/Mail.astro";
+import ArrowRight from "@/icons/ArrowRight.astro";
+import HeroTags from "./HeroTags.astro";
 
 const { basics } = Astro.props;
-const { profiles } = basics;
-
-const SOCIAL_ICONS = {
-  LinkedIn,
-  GitHub,
-  Contáctame,
-};
+const { profiles, available, languages } = basics;
 
 const linkedInUrl = profiles.find(({ network }) => network === "LinkedIn").url;
 const [title, summary, technologies] = basics.summary.split(":");
 ---
 
-<div class="flex flex-col mt-4 sm:flex-row gap-x-2 items-center">
+<div class="flex max-sm:flex-col gap-x-2 items-center">
   <picture class="relative aspect-square flex-none">
     {
-      basics.available && (
-        <span class="absolute flex items-center justify-center bottom-[92%] left-[92%] rounded-full size-5 bg-green-400 border-[3px] border-white dark:border-gray-800 p-px transition hover:scale-110">
-          <a
-            class="group rounded-full size-full bg-green-500 animate-ping hover:animate-none"
-            target="_blank"
-            href={linkedInUrl}
-          >
-            <div class="hidden group-hover:block absolute -top-10 left-1/2 -translate-x-1/2 rounded-lg text-xs font-medium py-2 px-3 border border-green-500">
-              <p class="whitespace-nowrap">Disponible para trabajo</p>
-            </div>
-          </a>
-        </span>
+      available && (
+        <a
+          class="group absolute flex items-center justify-center bottom-[95%] left-[95%] rounded-full size-4 bg-blue-400 dark:bg-green-500 p-px transition cursor-pointer"
+          target="_blank"
+          href={linkedInUrl}
+        >
+          <span class=" bg-blue-600 dark:bg-green-500 rounded-full size-4 animate-ping" />
+          <div class="absolute bottom-6 scale-0 group-hover:scale-100 transition origin-bottom rounded-lg text-sm font-semibold py-2 px-3 bg-gradient-to-br from-blue-500 to-sky-400 text-white">
+            <p class="whitespace-nowrap">Disponible para trabajo</p>
+          </div>
+        </a>
       )
     }
-
     <img
-      class="size-32 sm:size-40 border border-gray rounded-xl"
+      class="size-32 sm:size-48 border border-gray rounded-xl"
       src="https://as1.ftcdn.net/v2/jpg/03/46/83/96/1000_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg"
       alt="user img"
     />
@@ -45,28 +35,41 @@ const [title, summary, technologies] = basics.summary.split(":");
     <h1
       class="text-gray-800 dark:text-white text-4xl sm:text-5xl font-bold pb-4"
     >
-      Hola! soy πk :)
+      Hola! soy Ricardo Ramirez
     </h1>
     <p
-      class="text-xl dark:text-gray-200 [&>strong]:text-blue-500 [&>strong]:font-bold"
+      class="text-lg dark:text-gray-200 [&>strong]:text-blue-400 [&>strong]:font-bold text-pretty"
     >
-      <strong>{title}</strong>
+      <strong
+        ><a href="http://www.unipacifico.edu.co/" target="_blank">{title}</a
+        ></strong
+      >
       {summary}
       <strong><a href="#skills">{technologies}</a></strong>
     </p>
   </div>
 </div>
-<nav class="flex flex-wrap gap-4 pt-4">
+<HeroTags profiles={profiles} />
+<div class="space-x-2 mt-2 cursor-default">
   {
-    profiles &&
-      profiles.map(({ network, username, url }) => {
-        const Icon = SOCIAL_ICONS[network];
-        return (
-          <SocialPill username={username} url={url}>
-            <Icon class="size-4 mx-1" />
-            <span class="px-1">{network}</span>
-          </SocialPill>
-        );
-      })
+    languages &&
+      languages.map(({ language, fluency, certificate, organization }) => (
+        <a
+          href={certificate}
+          target="_blank"
+          title={organization}
+          class={`${certificate && "group"} inline-flex gap-x-1 items-center text-xs px-3 py-1 bg-slate-200 dark:bg-slate-700 dark:text-white rounded-full`}
+        >
+          <span>
+            <strong class="text-blue-500 dark:text-blue-300">
+              {`${language} - `}
+            </strong>
+            {fluency}
+          </span>
+          {certificate && (
+            <ArrowRight class="size-2.5 group-hover:scale-[1.2] text-blue-500 dark:text-blue-400 transition" />
+          )}
+        </a>
+      ))
   }
-</nav>
+</div>

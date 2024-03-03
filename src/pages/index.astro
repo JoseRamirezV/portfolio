@@ -8,7 +8,7 @@ import Skills from "@/components/Skills.astro";
 import Briefcase from "@/icons/Briefcase.astro";
 import Code from "@/icons/Code.astro";
 import UserCode from "@/icons/UserCode.astro";
-import UserHeart from "@/icons/UserHeart.astro";
+import UserCheck from "@/icons/UserCheck.astro";
 import Layout from "@/layouts/Layout.astro";
 import { basics } from "@/resume.json";
 ---
@@ -40,12 +40,12 @@ import { basics } from "@/resume.json";
         </h2>
         <Projects />
       </SectionContainer>
-      <SectionContainer id="skills">
+      <SectionContainer id="conocimientos">
         <h2
           class="flex items-center text-4xl font-semibold gap-x-3 mb-10 text-gray-800 dark:text-white"
         >
           <UserCode class="size-8 stroke-2" />
-          Tecnologías
+          Conocimientos
         </h2>
         <Skills />
       </SectionContainer>
@@ -53,7 +53,7 @@ import { basics } from "@/resume.json";
         <h2
           class="flex items-center text-4xl font-semibold gap-x-3 mb-10 text-gray-800 dark:text-white"
         >
-          <UserHeart class="size-8 stroke-2" />
+          <UserCheck class="size-8 stroke-2" />
           Sobre mi
         </h2>
         <AboutMe />
