@@ -47,17 +47,17 @@ const ICONS = {
   class="flex flex-col items-center gap-y-8 p-8 sm:p-10"
 >
   <h4
-    class="text-transparent bg-clip-text bg-gradient-to-br dark:bg-gradient-to-tl from-sky-600 to-sky-400 text-4xl font-bold"
+    class="text-transparent bg-clip-text bg-gradient-to-br dark:bg-gradient-to-tl from-sky-600 to-sky-400 text-3xl xs:text-4xl font-bold"
   >
     {category}
   </h4>
-  <ul class="grid grid-cols-3 sm:grid-cols-3 gap-5 p-5 w-full">
+  <ul class="grid grid-cols-3 gap-5 p-5 w-full">
     {
       skills.map((skill) => {
         const Icon = ICONS[skill];
         return (
           <li class="flex flex-col gap-2 items-center">
-            <Icon class="size-10 sm:max-md:size-12 lg:size-12 text-gray-800 dark:text-white" />
+            <Icon class="size-8 xs:size-10 sm:max-md:size-12 lg:size-12 text-gray-800 dark:text-white" />
             <span class="font-medium max-md:text-sm text-gray-600 dark:text-white text-pretty">{skill}</span>
           </li>
         );

@@ -2,9 +2,10 @@
 interface Props {
   class?: string;
   id?: string;
+  title?: string;
 }
 
-const { class: className, id } = Astro.props;
+const { class: className, id, title } = Astro.props;
 ---
 
 <section
@@ -12,6 +13,14 @@ const { class: className, id } = Astro.props;
   data-section={id}
   class={`${className} scroll-m-20 w-full mx-auto max-w-sm sm:max-w-xl md:max-w-2xl lg:max-w-4xl`}
 >
+  {
+    title && (
+      <h2 class="flex items-center text-4xl font-semibold gap-x-3 mb-10 text-gray-800 dark:text-white">
+        <slot name="icon" />
+        {title}
+      </h2>
+    )
+  }
   <slot />
 </section>
 <script is:inline>

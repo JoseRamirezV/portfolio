@@ -1,8 +1,8 @@
 ---
-import AboutMe from "@/components/sections/About_me.astro"
+import AboutMe from "@/components/sections/About_me.astro";
 import Experience from "@/components/sections/Experience.astro";
 import Hero from "@/components/sections/Hero.astro";
-import Projects from "@/components/Projects.astro";
+import Projects from "@/components/sections/Projects.astro";
 import SectionContainer from "@/components/SectionContainer.astro";
 import Skills from "@/components/sections/Skills.astro";
 import Briefcase from "@/icons/Briefcase.astro";
@@ -22,40 +22,20 @@ import { basics } from "@resume";
       <Hero basics={basics} />
     </SectionContainer>
     <div class="space-y-24">
-      <SectionContainer id="experiencia">
-        <h2
-          class="flex items-center text-4xl font-semibold gap-x-3 mb-10 text-gray-800 dark:text-white"
-        >
-          <Briefcase class="size-8 stroke-2" />
-          Experiencia
-        </h2>
+      <SectionContainer id="experiencia"  title="Experiencia">
+        <Briefcase class="size-8 stroke-2" slot="icon" />
         <Experience />
       </SectionContainer>
-      <SectionContainer id="proyectos">
-        <h2
-          class="flex items-center text-4xl font-semibold gap-x-3 mb-10 text-gray-800 dark:text-white"
-        >
-          <Code class="size-8 stroke-2" />
-          Proyectos
-        </h2>
+      <SectionContainer id="proyectos" title="Proyectos">
+        <Code class="size-8 stroke-2" slot="icon"/>
         <Projects />
       </SectionContainer>
-      <SectionContainer id="conocimientos">
-        <h2
-          class="flex items-center text-4xl font-semibold gap-x-3 mb-10 text-gray-800 dark:text-white"
-        >
-          <UserCode class="size-8 stroke-2" />
-          Conocimientos
-        </h2>
+      <SectionContainer id="conocimientos" title="Conocimientos">
+        <UserCode class="size-8 stroke-2" slot="icon"/>
         <Skills />
       </SectionContainer>
-      <SectionContainer id="sobre-mi">
-        <h2
-          class="flex items-center text-4xl font-semibold gap-x-3 mb-10 text-gray-800 dark:text-white"
-        >
-          <UserCheck class="size-8 stroke-2" />
-          Sobre mi
-        </h2>
+      <SectionContainer id="sobre-mi" title="Sobre mi">
+        <UserCheck class="size-8 stroke-2" slot="icon"/>
         <AboutMe />
       </SectionContainer>
     </div>

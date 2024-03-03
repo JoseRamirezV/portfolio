@@ -2,9 +2,14 @@
 import ArrowRight from "@/icons/ArrowRight.astro";
 import Check from "@/icons/Check.astro";
 
-const { company, position, url, startDate, endDate, summary, highlights} = Astro.props;
+const { company, position, url, startDate, endDate, summary, highlights } =
+  Astro.props;
 
-const highlightsContent = highlights.length > 0 && highlights.map(({ content, highlight }) => content.replace(highlight, `<strong>${highlight}</strong>`));
+const highlightsContent =
+  highlights.length > 0 &&
+  highlights.map(({ content, highlight }) =>
+    content.replace(highlight, `<strong>${highlight}</strong>`)
+  );
 ---
 
 <span
@@ -22,7 +27,9 @@ const highlightsContent = highlights.length > 0 && highlights.map(({ content, hi
     ></path>
   </svg>
 </span>
-<h3 class="flex items-center text-2xl font-bold text-blue-500 dark:text-blue-400">
+<h3
+  class="flex items-center text-2xl font-bold text-blue-500 dark:text-blue-400"
+>
   {position}
   {
     !endDate && (
@@ -36,20 +43,23 @@ const highlightsContent = highlights.length > 0 && highlights.map(({ content, hi
 <time
   class="block mt-1 mb-2 text-xs leading-none text-gray-500 dark:text-gray-300"
 >
-  {`${startDate} - ${endDate ?? 'Presente'}`}
+  {`${startDate} - ${endDate ?? "Presente"}`}
 </time>
-<p class="mb-4 text-gray-600 dark:text-white ">
+<p class="mb-4 text-gray-600 dark:text-white">
   {summary}
   {
     highlightsContent && (
-        <ul class="max-w-2xl text-gray-500 dark:text-gray-300">
-          {highlightsContent.map((highlight) => (
-            <li class="flex items-baseline gap-2">
-                <Check class="max-sm:size-12 size-3 text-blue-500 dark:text-blue-400"/>
-                <p class="w-full text-pretty [&>strong]:font-semibold [&>strong]:text-blue-500 dark:[&>strong]:text-blue-400" set:html={highlight}/>
-            </li>
-          ))}
-        </ul>
+      <ul class="max-w-2xl text-gray-500 dark:text-gray-300">
+        {highlightsContent.map((highlight) => (
+          <li class="flex items-baseline gap-2">
+            <Check class="size-3 text-blue-500 dark:text-blue-400" />
+            <p
+              class="w-full text-pretty [&>strong]:font-semibold [&>strong]:text-blue-500 dark:[&>strong]:text-blue-400"
+              set:html={highlight}
+            />
+          </li>
+        ))}
+      </ul>
     )
   }
 </p>
@@ -60,7 +70,7 @@ const highlightsContent = highlights.length > 0 && highlights.map(({ content, hi
       class="inline-flex items-center gap-1 px-4 py-2 text-sm font-semibold text-gray-600 bg-white border border-gray-200 rounded-lg hover:bg-sky-50 hover:text-blue-500 dark:hover:text-white dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-slate-800/60 transition"
     >
       Ir a sitio
-      <ArrowRight class="size-3 text-blue-500 dark:text-blue-400">
+      <ArrowRight class="size-3 text-blue-500 dark:text-blue-400" />
     </a>
   )
 }
