@@ -6,7 +6,6 @@ const lang = getLangFromUrl(Astro.url);
 const [link, label] = Object.entries(languages).find(
   ([language]) => lang !== language
 );
-console.log({ label, link });
 const t = useTranslations(lang);
 ---
 
