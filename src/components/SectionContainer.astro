@@ -26,7 +26,7 @@ const { class: className, id, title } = Astro.props;
 <script is:inline>
   if (matchMedia("(min-width: 640px)").matches) {
     const sections = document.querySelectorAll("section");
-    const navItems = document.querySelectorAll("#nav-bar a");
+    const navItems = document.querySelectorAll(".section_link");
 
     const onChange = (entries) => {
       entries.forEach((entry) => {

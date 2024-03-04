@@ -1,13 +1,11 @@
 ---
-import FileDownload from "@/icons/Drive.astro";
-import SocialPill from "./SocialPill.astro";
+import Download from "@/icons/Download.astro";
 import GitHub from "@/icons/GitHub.astro";
 import LinkedIn from "@/icons/LinkedIn.astro";
 import Contáctame from "@/icons/Mail.astro";
-import Download from "@/icons/Download.astro";
-import Drive from "@/icons/Drive.astro";
+import SocialPill from "./SocialPill.astro";
 
-const { profiles } = Astro.props;
+const { profiles, resume } = Astro.props;
 
 const SOCIAL_ICONS = {
   LinkedIn,
@@ -29,34 +27,8 @@ const SOCIAL_ICONS = {
         );
       })
   }
-  <div class="group relative flex justify-center">
-    <SocialPill>
+    <SocialPill url={resume}>
       <span class="px-1">CV</span>
       <Download class="size-3.5 mx-1" />
     </SocialPill>
-    <div
-      class="absolute top-full inline-flex justify-center scale-0 group-hover:scale-100 transition origin-top gap-x-2 pt-2 font-semibold *:rounded *:px-3 *:py-2 *:bg-slate-200 *:dark:bg-gray-800 *:text-gray-700 *:dark:text-gray-200 text-sm"
-    >
-      <a
-        href="https://drive.google.com/file/d/1MCdJzUR2MRyoP28KL_pwWVAgLr9yksWz/view?usp=sharing"
-        target="_blank"
-        class="relative group/lan flex justify-center items-center hover:text-blue-600 dark:hover:text-gray-200 hover:border-blue-500 border border-gray-600 dark:hover:border-slate-400 transition *:transition-transform"
-      >
-        <span class="group-hover/lan:scale-0 origin-bottom">Es</span>
-        <Drive
-          class="absolute scale-0 group-hover/lan:scale-100 size-5 origin-top"
-        />
-      </a>
-      <a
-        href="https://drive.google.com/file/d/1CPRUJDYQTVjyj6fz-zU1xe_YlK6O2UC7/view?usp=sharing"
-        target="_blank"
-        class="relative group/lan flex justify-center items-center hover:text-blue-600 dark:hover:text-gray-200 hover:border-blue-500 border border-gray-600 dark:hover:border-slate-400 transition *:transition-transform"
-      >
-        <span class="group-hover/lan:scale-0 origin-bottom">En</span>
-        <Drive
-          class="absolute scale-0 group-hover/lan:scale-100 size-5 origin-top"
-        />
-      </a>
-    </div>
-  </div>
 </nav>

@@ -1,0 +1,33 @@
+---
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+import { languages } from "@/i18n/ui";
+
+const lang = getLangFromUrl(Astro.url);
+const [link, label] = Object.entries(languages).find(
+  ([language]) => lang !== language
+);
+console.log({ label, link });
+const t = useTranslations(lang);
+---
+
+<a
+  class="relative flex gap-x-2 items-center p-3 lg:px-5 2xl:p-6 hover:scale-125 transition"
+  href={`/${link}`}
+>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    class="size-4 lg:hidden"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    stroke-width="1.5"
+    stroke="currentColor"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+      d="M16 3l4 4l-4 4"></path><path d="M10 7l10 0"></path><path
+      d="M8 13l-4 4l4 4"></path><path d="M4 17l9 0"></path></svg
+  >
+  {label}
+</a>

@@ -1,12 +1,13 @@
 {
   "basics": {
     "name": "Jose Ricardo Ramirez Varon",
-    "label": "Desarrollador web",
+    "label": "Web developer",
     "image": "",
     "email": "jr.ramirez.varon@gmail.com",
     "available": true,
     "phone": "+57 317-377-7044",
-    "summary": "Ingeniero de sistemas:con buen manejo del idioma ingles y experiencia con tecnologías como:React, Angular, Node.js y MongoDB",
+    "summary": "System engineer:with good command of the English language and experience working with technologies such as:React, Angular, Node.js y MongoDB",
+    "resume": "https://drive.google.com/file/d/1CPRUJDYQTVjyj6fz-zU1xe_YlK6O2UC7/view?usp=sharing",
     "location": {
       "postalCode": "764502",
       "city": "Buenaventura",

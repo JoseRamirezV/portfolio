@@ -5,37 +5,42 @@ import Code from "@/icons/Code.astro";
 import Contact from "@/icons/Contact.astro";
 import UserCode from "@/icons/UserCode.astro";
 import UserCheck from "@/icons/UserCheck.astro";
-import ThemeToggle from "../ThemeToggle.astro";
+import ThemeToggle from "./ThemeToggle.astro";
+
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+import LanguageToggle from "./LanguageToggle.astro";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 
 const SECTIONS = [
   {
-    title: "Experiencia",
-    link: "#experiencia",
-    label: "experiencia",
+    title: t("nav.experience"),
+    link: `/${lang}#${t("nav.experience")}`,
+    label: t("nav.experience"),
     Icon: Experience,
   },
   {
-    title: "Proyectos",
-    link: "#proyectos",
-    label: "proyectos",
+    title: t("nav.projects"),
+    link: `/${lang}#${t("nav.projects")}`,
+    label: t("nav.projects"),
     Icon: Code,
   },
   {
-    title: "Conocimientos",
-    link: "#conocimientos",
-    label: "conocimientos",
+    title: t("nav.skills"),
+    link: `/${lang}#${t("nav.skills")}`,
+    label: t("nav.skills"),
     Icon: UserCode,
   },
   {
-    title: "Sobre mi",
-    link: "#sobre-mi",
-    label: "sobre-mi",
+    title: t("nav.aboutMe"),
+    link: `/${lang}#${t("nav.aboutMe").replace(" ", "-")}`,
+    label: t("nav.aboutMe").replace(" ", "-"),
     Icon: UserCheck,
   },
   {
-    title: "Contacto",
+    title: t("nav.contact"),
     link: "mailto:jr.ramirez.varon@gmail.com",
-    label: "contacto",
     Icon: Contact,
   },
 ];
@@ -59,7 +64,7 @@ const SECTIONS = [
         SECTIONS.map(({ link, title, Icon, label }) => (
           <a
             href={link}
-            class="dark:max-lg:hover:bg-slate-700 max-lg:hover:bg-gray-300 group relative flex lg:flex-row-reverse items-center gap-x-2 p-3 lg:px-5 2xl:p-6 w-full font-semibold rounded-lg lg:hover:text-blue-500 lg:dark:hover:text-blue-400"
+            class="section_link dark:max-lg:hover:bg-slate-700 max-lg:hover:bg-gray-300 group relative flex lg:flex-row-reverse items-center gap-x-2 p-3 lg:px-5 2xl:p-6 w-full font-semibold rounded-lg lg:hover:text-blue-500 lg:dark:hover:text-blue-400"
             aria-label={label}
           >
             <Icon class="transition size-4 lg:size-5 2xl:size-8 lg:group-hover:scale-125" />
@@ -70,8 +75,9 @@ const SECTIONS = [
         ))
       }
       <ThemeToggle
-        class="dark:max-lg:hover:bg-slate-700 max-lg:hover:bg-gray-300 relative flex items-center w-full rounded-lg lg:hover:text-blue-500 lg:dark:hover:text-blue-400 cursor-pointer"
+        class="dark:max-lg:hover:bg-slate-700 max-lg:hover:bg-gray-300 relative flex items-center lg:justify-end w-full rounded-lg lg:hover:text-blue-500 lg:dark:hover:text-blue-400 cursor-pointer"
       />
+      <LanguageToggle/>
     </nav>
   </div>
 </header>

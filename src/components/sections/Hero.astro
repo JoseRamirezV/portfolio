@@ -3,26 +3,26 @@ import ArrowRight from "@/icons/ArrowRight.astro";
 import HeroTags from "../HeroTags.astro";
 
 const { basics } = Astro.props;
-const { profiles, available, languages } = basics;
+const { profiles, available, languages, resume } = basics;
 
 const linkedInUrl = profiles.find(({ network }) => network === "LinkedIn").url;
 const [title, summary, technologies] = basics.summary.split(":");
 ---
 
 <div class="flex max-sm:flex-col gap-x-2 items-center">
-  <picture class="relative aspect-square flex-none">
+  <figure class="flex flex-col-reverse items-center gap-y-2 relative aspect-square flex-none">
     {
       available && (
         <a
-          class="group absolute flex items-center justify-center bottom-[95%] left-[95%] rounded-full size-4 bg-blue-400 dark:bg-green-500 p-px transition cursor-pointer"
+          class="max-lg:hidden peer absolute flex items-center justify-center bottom-[95%] left-[95%] rounded-full size-4 bg-blue-400 dark:bg-sky-500 p-px transition cursor-pointer"
           target="_blank"
           href={linkedInUrl}
         >
-          <span class=" bg-blue-600 dark:bg-green-500 rounded-full size-4 animate-ping" />
-          <div class="absolute bottom-6 scale-0 group-hover:scale-100 transition origin-bottom rounded-lg text-sm font-semibold py-2 px-3 bg-gradient-to-br from-blue-500 to-sky-400 text-white">
+          <span class="max-lg:hidden bg-blue-600 dark:bg-blue-500 rounded-full size-4 animate-ping" />
+          </a>
+          <div class="lg:absolute lg:-top-12 lg:left-1/2 lg:scale-0 lg:peer-hover:scale-100 transition origin-bottom rounded-lg text-sm max-lg:text-xs font-semibold py-2 px-3 bg-gradient-to-br dark:from-blue-900 dark:to-slate-800 from-blue-500 to-sky-400 text-white">
             <p class="whitespace-nowrap">Disponible para trabajo</p>
           </div>
-        </a>
       )
     }
     <img
@@ -30,7 +30,7 @@ const [title, summary, technologies] = basics.summary.split(":");
       src="https://as1.ftcdn.net/v2/jpg/03/46/83/96/1000_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg"
       alt="user img"
     />
-  </picture>
+  </figure>
   <div class="max-w-xl p-2">
     <h1
       class="text-gray-800 dark:text-white text-4xl sm:text-5xl font-bold pb-4"
@@ -49,7 +49,7 @@ const [title, summary, technologies] = basics.summary.split(":");
     </p>
   </div>
 </div>
-<HeroTags profiles={profiles} />
+<HeroTags profiles={profiles} resume={resume} />
 <div class="space-x-2 mt-2 cursor-default">
   {
     languages &&

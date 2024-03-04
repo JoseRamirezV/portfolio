@@ -1,0 +1,44 @@
+---
+import AboutMe from "@/components/sections/About_me.astro";
+import Experience from "@/components/sections/Experience.astro";
+import Hero from "@/components/sections/Hero.astro";
+import Projects from "@/components/sections/Projects.astro";
+import SectionContainer from "@/components/SectionContainer.astro";
+import Skills from "@/components/sections/Skills.astro";
+import Briefcase from "@/icons/Briefcase.astro";
+import Code from "@/icons/Code.astro";
+import UserCode from "@/icons/UserCode.astro";
+import UserCheck from "@/icons/UserCheck.astro";
+import Layout from "@/layouts/Layout.astro";
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+import { basics, work, projects, knowledge, about } from '@resumeEs'
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+<Layout
+  title="Portafolio de Ricardo Ramirez - Programador y Desarrollador web, React Junior"
+  description="Contrata a Ricardo Ramirez, Ingeniero en sistemas y desarrollador web con experiencia en diferentes librerías de JavaScript"
+>
+    <SectionContainer class="py-16 md:py-44">
+      <Hero basics={basics} />
+    </SectionContainer>
+    <div class="space-y-24">
+      <SectionContainer id={t("nav.experience")} title={t("nav.experience")}>
+        <Briefcase class="size-8 stroke-2" slot="icon" />
+        <Experience experience={work} />
+      </SectionContainer>
+      <SectionContainer id={t("nav.projects")}title={t("nav.projects")}>
+        <Code class="size-8 stroke-2" slot="icon"/>
+        <Projects projects={projects}/>
+      </SectionContainer>
+      <SectionContainer id={t("nav.skills")}title={t("nav.skills")}>
+        <UserCode class="size-8 stroke-2" slot="icon"/>
+        <Skills knowledge={knowledge}/>
+      </SectionContainer>
+      <SectionContainer id={t("nav.aboutMe").replace(' ', '-')} title={t("nav.aboutMe")}>
+        <UserCheck class="size-8 stroke-2" slot="icon"/>
+        <AboutMe about={about}/>
+      </SectionContainer>
+    </div>
+</Layout>

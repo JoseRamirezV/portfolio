@@ -1,18 +1,25 @@
 ---
-import { about } from "@resume";
+const { about } = Astro.props;
 const { points, image } = about;
 
 const content = points.map(({ content, highlights }) => {
   for (const highlight of highlights) {
-    content = content.replace(highlight, `<strong>${highlight}</strong>`)
+    content = content.replace(highlight, `<strong>${highlight}</strong>`);
   }
-  return content
+  return content;
 });
 ---
 
 <div class="flex flex-col-reverse lg:flex-row gap-8">
   <div class="flex flex-col gap-5 text-gray-700 dark:text-white">
-    {content.map((point) => <p set:html={point} class="[&>strong]:text-blue-500 dark:[&>strong]:text-blue-400 text-pretty" />)}
+    {
+      content.map((point) => (
+        <p
+          set:html={point}
+          class="[&>strong]:text-blue-500 dark:[&>strong]:text-blue-400 text-pretty"
+        />
+      ))
+    }
   </div>
   <img
     src={image}
