@@ -41,14 +41,16 @@ const { title, description } = Astro.props;
     width: 0.85rem;
   }
 
-  ::-webkit-scrollbar-thumb {
-    border-radius: 50px;
-    border: 0.15rem solid white;
-    background: rgb(156 163 175);
+  ::-webkit-scrollbar-track {
+    @apply bg-white;
   }
 
+  ::-webkit-scrollbar-thumb {
+    border: 0.15rem solid;
+    @apply rounded-full border-white bg-[rgb(156,163,175)];
+  }
   ::-webkit-scrollbar-thumb:hover {
-    background: rgb(107 114 128);
+    @apply bg-[rgb(107,114,128)];
   }
 
   body {
@@ -59,21 +61,21 @@ const { title, description } = Astro.props;
     overflow-x: hidden;
   }
 
-  @media (prefers-reduced-motion: reduce) {
-    html {
-      scroll-behavior: auto;
-    }
-  }
-
   .dark ::-webkit-scrollbar-track {
     @apply bg-[rgb(20,22,30)];
   }
 
   .dark ::-webkit-scrollbar-thumb {
-    @apply border-[rgb(20,22,30)] bg-slate-700;
+    @apply rounded-full border-[rgb(20,22,30)] bg-slate-700;
   }
 
   .dark ::-webkit-scrollbar-thumb:hover {
     @apply bg-slate-800;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
   }
 </style>
