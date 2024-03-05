@@ -2,7 +2,7 @@
 import Download from "@/icons/Download.astro";
 import GitHub from "@/icons/GitHub.astro";
 import LinkedIn from "@/icons/LinkedIn.astro";
-import Contáctame from "@/icons/Mail.astro";
+import Mail from "@/icons/Mail.astro";
 import SocialPill from "./SocialPill.astro";
 
 const { profiles, resume } = Astro.props;
@@ -10,15 +10,15 @@ const { profiles, resume } = Astro.props;
 const SOCIAL_ICONS = {
   LinkedIn,
   GitHub,
-  Contáctame,
+  "Contact":Mail,
 };
 ---
 
-<nav class="flex flex-wrap gap-2 pt-2">
+<nav class="flex flex-wrap gap-2">
   {
     profiles &&
-      profiles.map(({ network, username, url }) => {
-        const Icon = SOCIAL_ICONS[network];
+      profiles.map(({ network, id, username, url }) => {
+        const Icon = SOCIAL_ICONS[id ?? network];
         return (
           <SocialPill username={username} url={url}>
             <Icon class="size-4 mx-1" />

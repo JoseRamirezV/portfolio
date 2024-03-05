@@ -22,7 +22,7 @@ const { title, description } = Astro.props;
     >
     </div>
     <Header />
-    <main class="mx-4 max-md:pt-6">
+    <main class="mx-4 max-sm:pt-10 sm:max-md:pt-20">
       <slot />
     </main>
     <Footer />
@@ -54,6 +54,7 @@ const { title, description } = Astro.props;
   body {
     display: flex;
     flex-direction: column;
+    align-items: center;
     min-height: 100vh;
     overflow-x: hidden;
   }

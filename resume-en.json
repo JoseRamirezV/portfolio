@@ -15,8 +15,8 @@
     },
     "languages": [
       {
-        "language": "Español",
-        "fluency": "Nativo"
+        "language": "Spanish",
+        "fluency": "Native"
       },
       {
         "language": "English",
@@ -27,7 +27,8 @@
     ],
     "profiles": [
       {
-        "network": "Contáctame",
+        "network": "Contact me",
+        "id":"Contact",
         "username": "Jose Ricardo Ramirez Varon",
         "url": "mailto:jr.ramirez.varon@gmail.com"
       },
@@ -46,37 +47,42 @@
   "work": [
     {
       "company": "OMI Security School",
-      "position": "Coordinador de soporte IT",
+      "position": "IT support coordinator",
       "url": null,
-      "startDate": "Abril 2021",
-      "endDate": "Diciembre 2023",
-      "summary": "Gestioné el area tecnológica de esta empresa cuyo fin es formar, entrenar, capacitar y certificar a todos los colaboradores de la comunidad Bonaverense en la protección de las instalaciones portuarias  ",
+      "startDate": "April 2021",
+      "endDate": "December 2023",
+      "summary": "I managed the technological area of this company whose purpose is to educate, train, qualify and certify all the collaborators of the Bonaverense community in the protection of port facilities.",
       "highlights": [
         {
-          "content": "Automaticé todos los procesos de creación y envío de archivos relacionados con la base de datos minimizando en un 90% el tiempo requerido cumplir con su ciclo laboral",
-          "highlight": "minimizando en un 90%"
+          "content": "Automated all the processes of creating, modifying and sending files related to the database, minimizing by 90% the time required to comply with the work cycle.",
+          "highlight": "minimizing by 90%"
         },
         {
-          "content": "Eliminé el riesgo de falsificación de los certificados mediante la actualización semanal a multiples puertos mediante una hoja de calculo generada automáticamente.",
-          "highlight": "Eliminé el riesgo de falsificación de los certificados"
+          "content": "Eliminated the risk of falsification of certificates through a weekly multi-port update using an automatically generated spreadsheet with the necessary data from the courses taken..",
+          "highlight": "Eliminated the risk of falsification of certificates"
         }
       ]
     },
     {
       "company": "Centro de entrenamiento para trabajo seguro en alturas CDETSA",
-      "position": "Soporte técnico",
+      "position": "IT Support",
       "url": "https://cdetsa.com/",
-      "startDate": "Junio 2022",
-      "endDate": "Diciembre 2023",
-      "summary": "Ofrecí apoyo en la optimización de la base de datos empresarial para la eficiente certificación de los usuarios de este centro.",
-      "highlights": []
+      "startDate": "June 2022",
+      "endDate": "December 2023",
+      "summary": "I was responsible for the optimization of the enterprise database to ensure efficient certification of this center's clients.",
+      "highlights": [
+        {
+          "content": "Automated the generation of multiple files required for the daily workday, reducing the workload by 40%.",
+          "highlight": "reducing the workload by 40%."
+        }
+      ]
     }
   ],
   "education": [
     {
       "institution": "Universidad del pacifico",
       "url": "http://www.unipacifico.edu.co/",
-      "area": "Ingeniería de sistemas",
+      "area": "Systems Engineer",
       "startDate": "2017",
       "endDate": "2023"
     }
@@ -114,7 +120,7 @@
       ]
     },
     {
-      "category": "Herramientas",
+      "category": "Tools",
       "skills": [
         "VSCode",
         "GitHub",
@@ -133,30 +139,24 @@
   "about": {
     "points": [
       {
-        "content": "Mi nombre es Jose Ricardo, aunque mis amigos me llaman πk, me gradué como Ingeniero en sistemas en 2023. Desde entonces he continuado brindando completo soporte técnico en el area de coordinación académica de OMI Security School.",
-        "highlights":["me gradué como Ingeniero en sistemas en 2023."]
+        "content": "My name is Jose Ricardo, although my friends call me πk, I graduated as a Systems Engineer in 2023. Since then I have continued to provide full technical support in the academic coordination area of OMI Security School.",
+        "highlights":["I graduated as a Systems Engineer in 2023."]
       },
       {
-        "content": "Entre mis logros destaco que logré optimizar el funcionamiento de multiples empresas locales que usan Excel como su base de datos, usando VBA para automatizar sus procesos diarios.",
-        "highlights": ["logré optimizar el funcionamiento de multiples empresas locales"]
+        "content": "Among my achievements I can highlight that I managed to optimize the performance of multiple local companies that use Excel as their database, using VBA to automate their daily processes.",
+        "highlights": ["I managed to optimize the performance of multiple local companies"]
       },
       {
-        "content": "Ademas, cuento con experiencia en desarrollo web, y uno de mis objetivos es usar este conocimiento para mejorar los sitios web de empresas locales donde he podido detectar cosas a mejorar.",
-        "highlights": ["uno de mis objetivos es usar este conocimiento para mejorar los sitios web de empresas locales"]
+        "content": "In addition, I have experience in web development, and one of my goals is to use this knowledge to improve the websites of local companies where I've been able to detect opportunities for improvement.",
+        "highlights": ["one of my goals is to use this knowledge to improve the websites of local companies"]
       }
     ],
     "image": "https://as1.ftcdn.net/v2/jpg/03/46/83/96/1000_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg"
   },
-  "references": [
-    {
-      "name": "Jose Ricardo Ramirez Zapata",
-      "reference": "Gerente, OMI Security School S.A.S"
-    }
-  ],
   "projects": [
     {
-      "name": "Organic & Chemical Landing page",
-      "description": "Landing page para nueva empresa de fertilizantes y abonos",
+      "name": "Organic & Chemical",
+      "description": "Landing page for a new fertilizer company located in Cundinamarca Colombia, Kilometer 14 - via Mosquera, la mesa Cundinamarca.",
       "image": "/projects/Chemical.webp",
       "startDate": "2023-11",
       "endDate": "2024-02",
@@ -167,9 +167,6 @@
         {
           "technology": "Chakra-Ui"
         }
-      ],
-      "highlights": [
-        "Won award at AIHacks 2016"
       ],
       "url": "https://joseramirezv.github.io/organic-chemical/",
       "repository": "https://github.com/JoseRamirezV/organic-chemical"

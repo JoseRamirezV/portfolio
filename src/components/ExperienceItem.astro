@@ -39,17 +39,17 @@ const highlightsContent =
     )
   }
 </h3>
-<span class="text-lg font-medium text-gray-600 dark:text-white">{company}</span>
+<span class="text-lg font-semibold text-gray-600 dark:text-white">{company}</span>
 <time
   class="block mt-1 mb-2 text-xs leading-none text-gray-500 dark:text-gray-300"
 >
   {`${startDate} - ${endDate ?? "Presente"}`}
 </time>
-<p class="mb-4 text-gray-600 dark:text-white">
+<p class="pb-2 font-medium text-gray-600 dark:text-white">
   {summary}
   {
     highlightsContent && (
-      <ul class="max-w-2xl text-gray-500 dark:text-gray-300">
+      <ul class="max-w-2xl text-gray-500 dark:text-gray-200">
         {highlightsContent.map((highlight) => (
           <li class="flex items-baseline gap-2">
             <Check class="size-3 text-blue-500 dark:text-blue-400" />
@@ -67,9 +67,9 @@ const highlightsContent =
   url && (
     <a
       href={url}
-      class="inline-flex items-center gap-1 px-4 py-2 text-sm font-semibold text-gray-600 bg-white border border-gray-200 rounded-lg hover:bg-sky-50 hover:text-blue-500 dark:hover:text-white dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-slate-800/60 transition"
+      class="inline-flex items-center gap-1 px-4 py-2 mt-2 text-sm font-semibold text-gray-600 bg-white border border-gray-200 rounded-lg hover:bg-sky-50 hover:text-blue-500 dark:hover:text-white dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-slate-800/60 transition"
     >
-      Ir a sitio
+      Empresa
       <ArrowRight class="size-3 text-blue-500 dark:text-blue-400" />
     </a>
   )
