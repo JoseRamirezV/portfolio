@@ -16,25 +16,25 @@ const t = useTranslations(lang);
 const SECTIONS = [
   {
     title: t("nav.experience"),
-    link: `/${lang}#${t("nav.experience")}`,
+    link: `#${t("nav.experience")}`,
     label: t("nav.experience"),
     Icon: Experience,
   },
   {
     title: t("nav.projects"),
-    link: `/${lang}#${t("nav.projects")}`,
+    link: `#${t("nav.projects")}`,
     label: t("nav.projects"),
     Icon: Code,
   },
   {
     title: t("nav.skills"),
-    link: `/${lang}#${t("nav.skills")}`,
+    link: `#${t("nav.skills")}`,
     label: t("nav.skills"),
     Icon: UserCode,
   },
   {
     title: t("nav.aboutMe"),
-    link: `/${lang}#${t("nav.aboutMe").replace(" ", "-")}`,
+    link: `#${t("nav.aboutMe").replace(" ", "-")}`,
     label: t("nav.aboutMe").replace(" ", "-"),
     Icon: UserCheck,
   },
@@ -76,6 +76,7 @@ const SECTIONS = [
       }
       <ThemeToggle
         class="dark:max-lg:hover:bg-slate-700 max-lg:hover:bg-gray-300 relative flex items-center lg:justify-end w-full rounded-lg lg:hover:text-blue-500 lg:dark:hover:text-blue-400 cursor-pointer"
+        label={t("nav.colorMode")}
       />
       <LanguageToggle/>
     </nav>

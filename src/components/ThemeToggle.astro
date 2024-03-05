@@ -5,9 +5,10 @@ import System from "@/icons/System.astro";
 
 interface Props {
   class: string;
+  label: string;
 }
 
-const { class: className } = Astro.props;
+const { class: className, label } = Astro.props;
 
 const THEMES = {
   dark: "Dark",
@@ -39,7 +40,7 @@ const THEMES = {
       id="mode"
       class="lg:hidden lg:whitespace-nowrap transition lg:py-3 lg:scale-0 lg:group-hover:scale-100 lg:origin-bottom-right lg:absolute lg:right-full max-sm:pe-2"
     >
-      Color mode
+      {label}
     </p>
     <ul
       id="themes-menu"
