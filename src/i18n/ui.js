@@ -8,13 +8,14 @@ export const defaultLang = "es";
 export const ui = {
   es: {
     "nav.experience": "Experiencia",
-    "nav.projects": "Projects",
+    "nav.projects": "Proyectos",
     "nav.skills": "Habilidades",
     "nav.aboutMe": "Sobre mi",
     "nav.contact": "Contacto",
     "nav.colorMode": "Tema",
     "footer.basedOn": "Inspirado por",
-    "hero.available": "Disponible para trabajar"
+    "hero.available": "Disponible para trabajar",
+    "hero.intro": "Hola! soy Ricardo Ramirez"
   },
   en: {
     "nav.experience": "Experience",
@@ -24,8 +25,7 @@ export const ui = {
     "nav.contact": "Contact",
     "nav.colorMode": "Theme",
     "footer.basedOn": "Inspired by",
-    "hero.available": "Available for work"
+    "hero.available": "Available for work",
+    "hero.intro": "Hey! I'm Ricardo Ramirez"
   },
 };
-
-export const showDefaultLang = false;

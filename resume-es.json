@@ -6,7 +6,7 @@
     "email": "jr.ramirez.varon@gmail.com",
     "available": true,
     "phone": "+57 317-377-7044",
-    "summary": "Ingeniero de sistemas:con buen manejo del idioma ingles y experiencia con tecnologías como:React, Angular, Node.js y MongoDB",
+    "summary": "Ingeniero de sistemas:con buen manejo del idioma ingles y experiencia con tecnologías como:React, Node.js, MongoDB y MySQL",
     "resume": "https://drive.google.com/file/d/1MCdJzUR2MRyoP28KL_pwWVAgLr9yksWz/view?usp=sharing",
     "location": {
       "postalCode": "764502",
@@ -44,6 +44,36 @@
       }
     ]
   },
+  "projects": [
+    {
+      "name": "Organic & Chemical",
+      "status": "En progreso",
+      "description": "Landing page para nueva empresa de fertilizantes y abonos ubicada en Cundinamarca Colombia, Kilómetro 14 - via Mosquera, la mesa Cundinamarca.",
+      "image": "/projects/Chemical.webp",
+      "technologies": [
+        "ReactJs",
+        "Chakra-Ui"
+      ],
+      "url": "https://joseramirezv.github.io/organic-chemical/",
+      "repository": "https://github.com/JoseRamirezV/organic-chemical"
+    },
+    {
+      "name": "Taskty.co",
+      "status": "En progreso",
+      "description": "Aplicación web que ofrece una forma rápida y sencilla de gestionar tareas diarias. Además, permite programar recordatorios y ser notificado mediante GMail",
+      "image": "/projects/Taskty.webp",
+      "technologies": [
+        "ReactJs",
+        "Chakra-Ui",
+        "NodeJs",
+        "Express",
+        "JWT",
+        "MongoDB"
+      ],
+      "url": "https://tasks-manager-nine.vercel.app/#/auth/sign-in",
+      "repository": "https://github.com/JoseRamirezV/organic-chemical"
+    }
+  ],
   "work": [
     {
       "company": "OMI Security School",
@@ -101,12 +131,12 @@
       "skills": [
         "HTML",
         "CSS",
-        "Sass",
-        "Chakra-Ui",
-        "Tailwind",
         "JavaScript",
         "React",
-        "Angular"
+        "Angular",
+        "Sass",
+        "Chakra-Ui",
+        "Tailwind"
       ]
     },
     {
@@ -116,7 +146,8 @@
         "Express",
         "PHP",
         "MySQL",
-        "MongoDB"
+        "MongoDB",
+        "JWT"
       ]
     },
     {
@@ -139,7 +170,7 @@
   "about": {
     "points": [
       {
-        "content": "Mi nombre es Jose Ricardo, aunque mis amigos me llaman πk, me gradué como Ingeniero en sistemas en 2023. Desde entonces he continuado brindando completo soporte técnico en el area de coordinación académica de OMI Security School.",
+        "content": "Mi nombre es Jose Ricardo, aunque mis amigos me llaman πk, me gradué como Ingeniero en sistemas en 2023 en la Universidad del pacifico. Desde entonces he continuado brindando completo soporte técnico en el area de coordinación académica de OMI Security School.",
         "highlights": [
           "me gradué como Ingeniero en sistemas en 2023."
         ]
@@ -151,31 +182,12 @@
         ]
       },
       {
-        "content": "Ademas, cuento con experiencia en desarrollo web, y uno de mis objetivos es usar este conocimiento para mejorar los sitios web de empresas locales donde he podido detectar cosas a mejorar.",
+        "content": "Ademas, cuento con experiencia en desarrollo web, y uno de mis objetivos es usar este conocimiento para mejorar los sitios web de empresas locales donde he podido detectar oportunidades de mejora.",
         "highlights": [
           "uno de mis objetivos es usar este conocimiento para mejorar los sitios web de empresas locales"
         ]
       }
     ],
-    "image": "https://as1.ftcdn.net/v2/jpg/03/46/83/96/1000_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg"
-  },
-  "projects": [
-    {
-      "name": "Organic & Chemical",
-      "description": "Landing page para nueva empresa de fertilizantes y abonos ubicada en Cundinamarca Colombia, Kilómetro 14 - via Mosquera, la mesa Cundinamarca.",
-      "image": "/projects/Chemical.webp",
-      "startDate": "2023-11",
-      "endDate": "2024-02",
-      "technologies": [
-        {
-          "technology": "ReactJs"
-        },
-        {
-          "technology": "Chakra-Ui"
-        }
-      ],
-      "url": "https://joseramirezv.github.io/organic-chemical/",
-      "repository": "https://github.com/JoseRamirezV/organic-chemical"
-    }
-  ]
+    "image": ""
+  }
 }

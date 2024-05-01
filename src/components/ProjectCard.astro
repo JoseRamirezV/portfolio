@@ -3,38 +3,65 @@ import GitHub from "@/icons/GitHub.astro";
 import Link from "@/icons/Link.astro";
 import ReactJs from "@/icons/React.astro";
 import ChakraUi from "@/icons/ChakraUi.astro";
+import NodeJs from "@/icons/NodeJs.astro";
+import JWT from "@/icons/JWT.astro";
+import Express from "@/icons/Express.astro";
+import MongoDB from "@/icons/MongoDB.astro";
 
-const { name, description, image, technologies, url, repository } = Astro.props;
+const { name, status, description, image, technologies, url, repository } =
+  Astro.props;
+
 const TECH_ICONS = {
-  ReactJs: { Icon: ReactJs, className: "bg-gray-800" },
-  "Chakra-Ui": { Icon: ChakraUi, className: "bg-cyan-600" },
+  ReactJs: {
+    Icon: ReactJs,
+    className: "bg-gray-100 text-gray-800 dark:text-white dark:bg-zinc-800",
+  },
+  "Chakra-Ui": { Icon: ChakraUi, className: "bg-cyan-600 text-white" },
+  NodeJs: {
+    Icon: NodeJs,
+    className: "bg-gray-100 text-gray-800 dark:bg-neutral-800 dark:text-white",
+  },
+  JWT: { Icon: JWT, className: "bg-gray-800 text-white" },
+  Express: { Icon: Express, className: "bg-gray-800 text-white" },
+  MongoDB: { Icon: MongoDB, className: "bg-green-600 text-white" },
 };
 ---
 
-<article class="group flex flex-col md:flex-row gap-8">
+<article class="group flex flex-col md:flex-row gap-x-8 gap-y-4">
   <header
-    class="duration-500 md:w-1/2 rounded-xl shadow-xl flex-none group-hover:shadow-2xl md:group-hover:-translate-y-1 overflow-clip"
+    class="md:w-1/2 rounded-xl shadow-xl flex-none group-hover:shadow-2xl duration-500 md:group-hover:-translate-y-1 overflow-clip"
   >
     <img
       src={image}
       alt=""
-      class="duration-500 object-cover object-left-top w-full h-56 sm:h-full md:scale-110 md:group-hover:scale-105"
+      class="object-cover object-left-top w-full h-56 sm:h-full md:scale-110 duration-500 md:group-hover:scale-105"
       loading="lazy"
     />
   </header>
   <div class="flex flex-col justify-between gap-y-4 pb-1">
-    <div class="space-y-4">
-      <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-300">{name}</h3>
+    <div class="space-y-2">
+      <span class="flex items-center gap-x-4">
+        <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-300">
+          {name}
+        </h3>
+        {
+          status && (
+            <span class="py-0.5 px-1.5 rounded font-semibold text-xs bg-sky-100 text-sky-600 dark:bg-sky-900 dark:text-sky-200">
+              {status}
+            </span>
+          )
+        }
+      </span>
       <ul class="flex flex-wrap gap-2">
         {
-          technologies.map(({ technology }) => {
+          technologies.map((technology) => {
             const Icon = TECH_ICONS[technology].Icon;
             return (
               <li>
                 <span
                   class:list={[
-                    "flex items-center gap-1 px-2 py-1 rounded-full font-medium text-xs text-white duration-200",
                     TECH_ICONS[technology].className,
+                    `flex items-center gap-1 px-2.5 py-1 rounded-full font-medium text-xs duration-200`,
                   ]}
                 >
                   <Icon class="size-3.5" />
@@ -42,19 +69,25 @@ const TECH_ICONS = {
                 </span>
               </li>
             );
-          }) 
+          })
         }
       </ul>
-      <p class="font-medium text-gray-700 dark:text-gray-400 text-pretty">
+      <p
+        class="font-medium pt-2 text-gray-700 dark:text-gray-400 xs:text-balance sm:text-pretty max-sm:pr-3"
+      >
         {description}
       </p>
     </div>
     <footer
-      class="flex gap-2 text-white *:text-lg *:inline-flex *:gap-2 *:items-center *:bg-gray-800 *:py-2 *:px-3 *:rounded-lg *:border *:border-gray-600 *:font-medium"
+      class="flex gap-2 text-white *:text-lg *:inline-flex *:gap-2 *:items-center *:bg-gray-800 *:py-1 *:px-3 *:rounded-lg *:border *:border-gray-600 *:font-medium"
     >
       {
         repository && (
-          <a href={repository} target="_blank" class="md:hover:-translate-y-1 md:hover:shadow-lg active:bg-black dark:hover:border-transparent transition-all">
+          <a
+            href={repository}
+            target="_blank"
+            class="md:hover:-translate-y-1 md:hover:shadow-lg active:bg-black dark:hover:border-transparent transition-all"
+          >
             <GitHub class="size-4" />
             GitHub
           </a>
@@ -62,7 +95,11 @@ const TECH_ICONS = {
       }
       {
         url && (
-          <a href={url} target="_blank" class="md:hover:-translate-y-1 md:hover:shadow-lg active:bg-black dark:hover:border-transparent transition-all">
+          <a
+            href={url}
+            target="_blank"
+            class="md:hover:-translate-y-1 md:hover:shadow-lg active:bg-black dark:hover:border-transparent transition-all"
+          >
             <Link class="size-4" />
             Preview
           </a>

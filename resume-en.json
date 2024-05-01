@@ -6,7 +6,7 @@
     "email": "jr.ramirez.varon@gmail.com",
     "available": true,
     "phone": "+57 317-377-7044",
-    "summary": "System engineer:with good command of the English language and experience working with technologies such as:React, Angular, Node.js y MongoDB",
+    "summary": "System engineer:with good command of the English language and experience working with technologies such as:React, Node.js, MongoDB and MySQL",
     "resume": "https://drive.google.com/file/d/1CPRUJDYQTVjyj6fz-zU1xe_YlK6O2UC7/view?usp=sharing",
     "location": {
       "postalCode": "764502",
@@ -28,7 +28,7 @@
     "profiles": [
       {
         "network": "Contact me",
-        "id":"Contact",
+        "id": "Contact",
         "username": "Jose Ricardo Ramirez Varon",
         "url": "mailto:jr.ramirez.varon@gmail.com"
       },
@@ -78,6 +78,38 @@
       ]
     }
   ],
+  "projects": [
+    {
+      "name": "Organic & Chemical",
+      "status": "In progress",
+      "description": "Landing page for a new fertilizer company located in Cundinamarca Colombia, Kilometer 14 - via Mosquera, la mesa Cundinamarca.",
+      "image": "/projects/Chemical.webp",
+      "startDate": "2023-11",
+      "endDate": "2024-02",
+      "technologies": [
+        "ReactJs",
+        "Chakra-Ui"
+      ],
+      "url": "https://joseramirezv.github.io/organic-chemical/",
+      "repository": "https://github.com/JoseRamirezV/organic-chemical"
+    },
+    {
+      "name": "Taskty.co",
+      "status": "In progress",
+      "description": "Web application that offers a quick and easy way to manage daily tasks. In addition, it allows you to schedule reminders and be notified via GMail.",
+      "image": "/projects/Taskty.webp",
+      "technologies": [
+        "ReactJs",
+        "Chakra-Ui",
+        "NodeJs",
+        "Express",
+        "JWT",
+        "MongoDB"
+      ],
+      "url": "https://tasks-manager-nine.vercel.app/#/auth/sign-in",
+      "repository": "https://github.com/JoseRamirezV/organic-chemical"
+    }
+  ],
   "education": [
     {
       "institution": "Universidad del pacifico",
@@ -101,12 +133,12 @@
       "skills": [
         "HTML",
         "CSS",
-        "Sass",
-        "Chakra-Ui",
-        "Tailwind",
         "JavaScript",
         "React",
-        "Angular"
+        "Angular",
+        "Sass",
+        "Chakra-Ui",
+        "Tailwind"
       ]
     },
     {
@@ -116,7 +148,8 @@
         "Express",
         "PHP",
         "MySQL",
-        "MongoDB"
+        "MongoDB",
+        "JWT"
       ]
     },
     {
@@ -139,37 +172,24 @@
   "about": {
     "points": [
       {
-        "content": "My name is Jose Ricardo, although my friends call me pika, I graduated as a Systems Engineer in 2023. Since then I have continued to provide full technical support in the academic coordination area of OMI Security School.",
-        "highlights":["I graduated as a Systems Engineer in 2023."]
+        "content": "My name is Jose Ricardo, although my friends call me pika, I graduated as a Systems Engineer in 2023 from the University of the Pacific. Since then I have continued to provide full technical support in the academic coordination area of OMI Security School.",
+        "highlights": [
+          "I graduated as a Systems Engineer in 2023."
+        ]
       },
       {
         "content": "Among my achievements I can highlight that I managed to optimize the performance of multiple local companies that use Excel as their database, using VBA to automate their daily processes.",
-        "highlights": ["I managed to optimize the performance of multiple local companies"]
+        "highlights": [
+          "I managed to optimize the performance of multiple local companies"
+        ]
       },
       {
         "content": "In addition, I have experience in web development, and one of my goals is to use this knowledge to improve the websites of local companies where I've been able to detect opportunities for improvement.",
-        "highlights": ["one of my goals is to use this knowledge to improve the websites of local companies"]
+        "highlights": [
+          "one of my goals is to use this knowledge to improve the websites of local companies"
+        ]
       }
     ],
-    "image": "https://as1.ftcdn.net/v2/jpg/03/46/83/96/1000_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg"
-  },
-  "projects": [
-    {
-      "name": "Organic & Chemical",
-      "description": "Landing page for a new fertilizer company located in Cundinamarca Colombia, Kilometer 14 - via Mosquera, la mesa Cundinamarca.",
-      "image": "/projects/Chemical.webp",
-      "startDate": "2023-11",
-      "endDate": "2024-02",
-      "technologies": [
-        {
-          "technology": "ReactJs"
-        },
-        {
-          "technology": "Chakra-Ui"
-        }
-      ],
-      "url": "https://joseramirezv.github.io/organic-chemical/",
-      "repository": "https://github.com/JoseRamirezV/organic-chemical"
-    }
-  ]
+    "image": ""
+  }
 }

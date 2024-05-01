@@ -1,9 +1,9 @@
 ---
-import ExperienceItem from "../ExperienceItem.astro";
+import ExperienceItem from "@/components/ExperienceItem.astro";
 const { experience } = Astro.props;
 ---
 
-<div class="relative ps-4">
+<div class="relative ps-4 max-sm:pr-6">
   <ol class="border-s border-gray-200 dark:border-gray-700">
     {
       experience.length > 0 &&

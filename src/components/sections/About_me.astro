@@ -21,9 +21,13 @@ const content = points.map(({ content, highlights }) => {
       ))
     }
   </div>
-  <img
-    src={image}
-    alt="Foto de Jose Ricardo"
-    class="max-w-xs self-center rounded-xl size-56"
-  />
+  {
+    image && (
+      <img
+        src={image}
+        alt="Foto de Jose Ricardo"
+        class="max-w-xs self-center rounded-xl size-56"
+      />
+    )
+  }
 </div>
