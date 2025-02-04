@@ -1,7 +1,7 @@
 ---
-import Moon from "@/icons/Moon.astro";
-import Sun from "@/icons/Sun.astro";
-import System from "@/icons/System.astro";
+import Moon from '@/icons/Moon.astro';
+import Sun from '@/icons/Sun.astro';
+import System from '@/icons/System.astro';
 
 interface Props {
   class: string;
@@ -11,45 +11,44 @@ interface Props {
 const { class: className, label } = Astro.props;
 
 const THEMES = {
-  dark: "Dark",
-  light: "Light",
-  system: "System",
+  dark: 'Dark',
+  light: 'Light',
+  system: 'System',
 };
 ---
 
 <div class={className}>
   <button
-    id="theme-menu-btn"
-    class="group relative flex gap-x-2 items-center lg:flex-row-reverse p-3 lg:px-5 2xl:p-6 transition-transform"
+    id='theme-menu-btn'
+    class='group relative flex gap-x-2 items-center lg:flex-row-reverse p-3 lg:px-5 2xl:p-6 transition-transform'
   >
-    <span class="relative flex *:transition-all *:size-4 lg:*:size-5 2xl:*:size-8">
-      <Moon
-        id="dark-icon"
-        class="theme-icon lg:group-hover:scale-125"
-      />
+    <span
+      class='relative flex *:transition-all *:size-4 lg:*:size-5 2xl:*:size-8'
+    >
+      <Moon id='dark-icon' class='theme-icon lg:group-hover:scale-125' />
       <Sun
-        id="light-icon"
-        class="theme-icon absolute scale-[1.2] lg:group-hover:scale-150"
+        id='light-icon'
+        class='theme-icon absolute scale-[1.2] lg:group-hover:scale-150'
       />
       <System
-        id="system-icon"
-        class="theme-icon absolute lg:group-hover:scale-125"
+        id='system-icon'
+        class='theme-icon absolute lg:group-hover:scale-125'
       />
     </span>
     <p
-      id="mode"
-      class="lg:hidden lg:whitespace-nowrap transition lg:py-3 lg:scale-0 lg:group-hover:scale-100 lg:origin-bottom-right lg:absolute lg:right-full max-sm:pe-2"
+      id='mode'
+      class='lg:hidden lg:whitespace-nowrap transition lg:py-3 lg:scale-0 lg:group-hover:scale-100 lg:origin-bottom-right lg:absolute lg:right-full max-sm:pe-2'
     >
       {label}
     </p>
     <ul
-      id="themes-menu"
-      class="max-lg:hidden absolute scale-0 lg:group-hover:scale-100 right-full -top-3/4 p-2 max-sm:me-4 transition-all origin-right shadow-[0px_3px_8px_rgb(0,0,0,0.2)] rounded-lg text-gray-900 dark:text-gray-300 bg-white dark:bg-gray-900"
+      id='themes-menu'
+      class='max-lg:hidden absolute scale-0 lg:group-hover:scale-100 right-full -top-3/4 p-2 max-sm:me-4 transition-all origin-right shadow-[0px_3px_8px_rgb(0,0,0,0.2)] rounded-lg text-gray-900 dark:text-gray-300 bg-white dark:bg-gray-900'
     >
       {
         Object.entries(THEMES).map(([key, theme]) => (
           <li
-            class="theme-option flex w-full items-center justify-stretch gap-2 pe-5 ps-2 py-1 rounded-lg transition hover:bg-gray-300 dark:hover:bg-gray-800 cursor-pointer"
+            class='theme-option flex w-full items-center justify-stretch gap-2 pe-5 ps-2 py-1 rounded-lg transition hover:bg-gray-300 dark:hover:bg-gray-800 cursor-pointer'
             id={key}
           >
             {theme}
@@ -61,60 +60,59 @@ const THEMES = {
 </div>
 
 <script is:inline>
-  const darkMode = window.matchMedia("(prefers-color-scheme: dark)");
-  const onMobile = window.matchMedia( "(max-width: 1024px)" )
-  const themeOptions = document.querySelectorAll(".theme-option");
-  const themeIcons = document.querySelectorAll(".theme-icon");
-  const themeMenuBtn = document.querySelector("#theme-menu-btn");
-  const themeMenu = document.querySelector("#themes-menu");
+  const darkMode = window.matchMedia('(prefers-color-scheme: dark)');
+  const onMobile = window.matchMedia('(max-width: 1024px)');
+  const themeOptions = document.querySelectorAll('.theme-option');
+  const themeIcons = document.querySelectorAll('.theme-icon');
+  const themeMenuBtn = document.querySelector('#theme-menu-btn');
+  const themeMenu = document.querySelector('#themes-menu');
 
   const getThemePreference = () => {
-    if (typeof localStorage !== "undefined") {
-      return localStorage.getItem("theme") ?? "system";
+    if (typeof localStorage !== 'undefined') {
+      return localStorage.getItem('theme') ?? 'system';
     }
-    return darkMode.matches ? "dark" : "light";
+    return darkMode.matches ? 'dark' : 'light';
   };
 
   const updateTheme = () => {
     const themePreference = getThemePreference();
     const isDark =
-      themePreference === "dark" ||
-      (themePreference === "system" && darkMode.matches);
-    document.documentElement.classList[isDark ? "add" : "remove"]("dark");
+      themePreference === 'dark' ||
+      (themePreference === 'system' && darkMode.matches);
+    document.documentElement.classList[isDark ? 'add' : 'remove']('dark');
     updateIcon(themePreference);
   };
 
   const updateIcon = (themePreference) => {
     themeIcons.forEach((icon) => {
-      const id = icon.id.split("-")[0];
+      const id = icon.id.split('-')[0];
       icon.style.scale = id === themePreference ? 1 : 0;
     });
   };
 
   const setThemePreference = (theme) => {
-    localStorage.setItem("theme", theme);
+    localStorage.setItem('theme', theme);
     updateTheme();
   };
 
   updateTheme();
 
   themeOptions.forEach((btn) => {
-    btn.addEventListener("click", () => {
+    btn.addEventListener('click', () => {
       setThemePreference(btn.id);
     });
   });
 
-  themeMenuBtn.addEventListener("click", (e) => {
-  if(onMobile.matches){
-    e.stopPropagation();
-    themeMenu.classList.toggle("scale-0");
-  }
-  });
-  
-  document.addEventListener("click", () => {
-  if(onMobile.matches){
-    themeMenu.classList.add("scale-0");
-  }
+  themeMenuBtn.addEventListener('click', (e) => {
+    if (onMobile.matches) {
+      e.stopPropagation();
+      themeMenu.classList.toggle('scale-0');
+    }
   });
 
+  document.addEventListener('click', () => {
+    if (onMobile.matches) {
+      themeMenu.classList.add('scale-0');
+    }
+  });
 </script>

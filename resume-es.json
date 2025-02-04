@@ -58,20 +58,19 @@
       "repository": "https://github.com/JoseRamirezV/organic-chemical"
     },
     {
-      "name": "Taskty.co",
-      "status": "En progreso",
-      "description": "Aplicación web que ofrece una forma rápida y sencilla de gestionar tareas diarias. Además, permite programar recordatorios y ser notificado mediante GMail",
-      "image": "/projects/Taskty.webp",
+      "name": "Proyecto final PIO (TeamFLow)",
+      "description": "Aplicación web diseñada usando stack MERN que permite gestión eficaz de pendientes en forma colaborativa.",
+      "image": "/projects/TeamFlow.webp",
       "technologies": [
         "ReactJs",
-        "Chakra-Ui",
+        "React Router",
+        "TailwindCSS",
         "NodeJs",
         "Express",
         "JWT",
         "MongoDB"
       ],
-      "url": "https://tasks-manager-nine.vercel.app/#/auth/sign-in",
-      "repository": "https://github.com/JoseRamirezV/organic-chemical"
+      "repository": "https://github.com/JoseRamirezV/collabTaskManager"
     }
   ],
   "work": [
