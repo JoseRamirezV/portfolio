@@ -18,31 +18,28 @@ const t = useTranslations(lang);
 ---
 
 <Layout
-   title='Portafolio de Ricardo Ramirez - Desarrollador web, React'
-   description='Ricardo Ramirez, Ingeniero en sistemas y desarrollador web full stack'
+  title='Portafolio de Ricardo Ramirez - Desarrollador web, React'
+  description='Ricardo Ramirez, Ingeniero en sistemas y desarrollador web full stack'
 >
-   <SectionContainer class='py-16 md:py-44'>
-      <Hero basics={basics} />
-   </SectionContainer>
-   <div class='space-y-24'>
-      <SectionContainer id={t('nav.experience')} title={t('nav.experience')}>
-         <Briefcase class='size-8 stroke-2' slot='icon' />
-         <Experience experience={work} />
-      </SectionContainer>
-      <SectionContainer id={t('nav.projects')} title={t('nav.projects')}>
-         <Code class='size-8 stroke-2' slot='icon' />
-         <Projects projects={projects} />
-      </SectionContainer>
-      <SectionContainer id={t('nav.skills')} title={t('nav.skills')}>
-         <UserCode class='size-8 stroke-2' slot='icon' />
-         <Skills knowledge={knowledge} />
-      </SectionContainer>
-      <SectionContainer
-         id={t('nav.aboutMe').replace(' ', '-')}
-         title={t('nav.aboutMe')}
-      >
-         <UserCheck class='size-8 stroke-2' slot='icon' />
-         <AboutMe about={about} />
-      </SectionContainer>
-   </div>
+  <SectionContainer id='home' class='py-16 md:py-44'>
+    <Hero basics={basics} />
+  </SectionContainer>
+  <div class='space-y-24'>
+    <SectionContainer id="experience" title={t('nav.experience')}>
+      <Briefcase class='size-8 stroke-2' slot='icon' />
+      <Experience experience={work} />
+    </SectionContainer>
+    <SectionContainer id="projects" title={t('nav.projects')}>
+      <Code class='size-8 stroke-2' slot='icon' />
+      <Projects projects={projects} />
+    </SectionContainer>
+    <SectionContainer id="skills" title={t('nav.skills')}>
+      <UserCode class='size-8 stroke-2' slot='icon' />
+      <Skills knowledge={knowledge} />
+    </SectionContainer>
+    <SectionContainer id="about-me" title={t('nav.aboutMe')}>
+      <UserCheck class='size-8 stroke-2' slot='icon' />
+      <AboutMe about={about} />
+    </SectionContainer>
+  </div>
 </Layout>

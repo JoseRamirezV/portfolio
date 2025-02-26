@@ -7,7 +7,7 @@
     "available": true,
     "phone": "+57 317-377-7044",
     "summary": "Ingeniero de sistemas:con buen manejo del idioma ingles y experiencia con tecnologías como:React, Node.js, MongoDB y MySQL",
-    "resume": "https://drive.google.com/file/d/1MCdJzUR2MRyoP28KL_pwWVAgLr9yksWz/view?usp=sharing",
+    "resume": "https://drive.google.com/open?id=10qiaS0fGizmL_Qn5Mb2ZdLqNW6Pmabh_&usp=drive_fs",
     "location": {
       "postalCode": "764502",
       "city": "Buenaventura",
@@ -20,7 +20,7 @@
       },
       {
         "language": "Ingles",
-        "fluency": "C2",
+        "fluency": "C1",
         "certificate": "https://cert.efset.org/NF2AEd",
         "organization": "EF Standard English Test (EF SET)"
       }
@@ -47,7 +47,7 @@
   "projects": [
     {
       "name": "Organic & Chemical",
-      "status": "En progreso",
+      "status": "En pausa",
       "description": "Landing page para nueva empresa de fertilizantes y abonos ubicada en Cundinamarca Colombia, Kilómetro 14 - via Mosquera, la mesa Cundinamarca.",
       "image": "/projects/Chemical.webp",
       "technologies": [
@@ -63,6 +63,7 @@
       "image": "/projects/TeamFlow.webp",
       "technologies": [
         "ReactJs",
+        "TypeScript",
         "React Router",
         "TailwindCSS",
         "NodeJs",
@@ -70,6 +71,7 @@
         "JWT",
         "MongoDB"
       ],
+      "url": "https://collabtaskmanagerclient.vercel.app/",
       "repository": "https://github.com/JoseRamirezV/collabTaskManager"
     }
   ],
@@ -132,10 +134,11 @@
         "CSS",
         "JavaScript",
         "React",
-        "Angular",
-        "Sass",
+        "NextJs",
+        "TypeScript",
         "Chakra-Ui",
-        "Tailwind"
+        "Tailwind",
+        "Sass"
       ]
     },
     {
@@ -143,23 +146,24 @@
       "skills": [
         "Node.js",
         "Express",
-        "PHP",
-        "MySQL",
+        "JWT",
         "MongoDB",
-        "JWT"
+        "MySQL",
+        "PHP"
       ]
     },
     {
       "category": "Herramientas",
       "skills": [
         "VSCode",
+        "Git",
         "GitHub",
         "npm",
         "Postman"
       ]
     },
     {
-      "category": "General",
+      "category": "Otros",
       "skills": [
         "Excel",
         "VBA"
@@ -167,26 +171,33 @@
     }
   ],
   "about": {
+    "image": "",
     "points": [
       {
-        "content": "Mi nombre es Jose Ricardo, aunque mis amigos me llaman πk, me gradué como Ingeniero en sistemas en 2023 en la Universidad del pacifico. Desde entonces he continuado brindando completo soporte técnico en el area de coordinación académica de OMI Security School.",
+        "content": "Mi nombre es Jose Ricardo. Inicié en el mundo del desarrollo de software mientras cursaba mis estudios en Ingeniería de Sistemas, donde descubrí mi verdadera pasión: no solo programar, sino diseñar soluciones y automatizar procesos para reducir el trabajo repetitivo y minimizar errores.",
         "highlights": [
-          "me gradué como Ingeniero en sistemas en 2023."
+          "diseñar soluciones y automatizar procesos para reducir el trabajo repetitivo y minimizar errores."
         ]
       },
       {
-        "content": "Entre mis logros destaco que logré optimizar el funcionamiento de multiples empresas locales que usan Excel como su base de datos, usando VBA para automatizar sus procesos diarios.",
+        "content": "Actualmente, desarrollo proyectos enfocados en optimizar la gestión de procesos en entornos laborales donde he tenido el privilegio de colaborar.",
         "highlights": [
-          "logré optimizar el funcionamiento de multiples empresas locales"
+          "optimizar la gestión de procesos en entornos laborales"
         ]
       },
       {
-        "content": "Ademas, cuento con experiencia en desarrollo web, y uno de mis objetivos es usar este conocimiento para mejorar los sitios web de empresas locales donde he podido detectar oportunidades de mejora.",
+        "content": "Uno de mis principales logros ha sido mejorar la eficiencia de varias empresas locales que utilizan Excel como base de datos principal. Mediante el uso de VBA, he automatizado sus operaciones diarias, agilizando los flujos de trabajo y aumentando significativamente la productividad.",
         "highlights": [
-          "uno de mis objetivos es usar este conocimiento para mejorar los sitios web de empresas locales"
+          "he automatizado sus operaciones diarias, agilizando los flujos de trabajo y aumentando significativamente la productividad."
+        ]
+      },
+      {
+        "content": "Como desarrollador web, mi objetivo es llevar estas optimizaciones al siguiente nivel. Para ello, estoy realizando un análisis profundo del entorno empresarial de estas compañías locales, con el propósito de diseñar un sistema integral que les permita gestionar sus procesos de manera eficiente y escalable.",
+        "highlights": [
+          "mi objetivo es llevar estas optimizaciones al siguiente nivel.",
+          "diseñar un sistema integral que les permita gestionar sus procesos de manera eficiente y escalable."
         ]
       }
-    ],
-    "image": ""
+    ]
   }
 }

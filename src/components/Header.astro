@@ -14,112 +14,124 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
 const SECTIONS = [
-   {
-      title: t('nav.experience'),
-      link: `#${t('nav.experience')}`,
-      label: t('nav.experience'),
-      Icon: Experience,
-   },
-   {
-      title: t('nav.projects'),
-      link: `#${t('nav.projects')}`,
-      label: t('nav.projects'),
-      Icon: Code,
-   },
-   {
-      title: t('nav.skills'),
-      link: `#${t('nav.skills')}`,
-      label: t('nav.skills'),
-      Icon: UserCode,
-   },
-   {
-      title: t('nav.aboutMe'),
-      link: `#${t('nav.aboutMe').replace(' ', '-')}`,
-      label: t('nav.aboutMe').replace(' ', '-'),
-      Icon: UserCheck,
-   },
-   {
-      title: t('nav.contact'),
-      link: 'mailto:jr.ramirez.varon@gmail.com',
-      Icon: Contact,
-   },
+  {
+    id: 'experience',
+    title: t('nav.experience'),
+    Icon: Experience,
+  },
+  {
+    id: 'projects',
+    title: t('nav.projects'),
+    Icon: Code,
+  },
+  {
+    id: 'skills',
+    title: t('nav.skills'),
+    Icon: UserCode,
+  },
+  {
+    id: 'about-me',
+    title: t('nav.aboutMe'),
+    Icon: UserCheck,
+  },
 ];
 ---
 
-<header
-   class='fixed top-0 lg:right-0 z-10 lg:h-full max-lg:w-full flex items-center'
->
-   <div class='relative flex w-full justify-end m-3 md:m-10 lg:m-0'>
-      <span
-         id='burger-container'
-         class='lg:hidden rounded-full p-2.5 cursor-pointer'
+<header class='fixed md:right-0 z-10 md:h-full max-md:w-full flex items-center'>
+  <div class='relative flex w-full justify-end m-3 md:m-2'>
+    <span
+      id='burger-container'
+      class='md:hidden rounded-full p-2.5 cursor-pointer'
+    >
+      <BurgerMenu id='burger' />
+    </span>
+    <nav
+      id='nav-bar'
+      class='scale-0 md:scale-100 origin-top-right absolute top-14 right-8 md:static flex flex-col items-start md:items-center text-lg md:text-base font-medium p-2 md:p-0 md:py-3 rounded-lg shadow-lg md:shadow-none text-gray-600 dark:text-white bg-white max-md:dark:bg-slate-900 md:bg-transparent transition'
+    >
+      {
+        SECTIONS.map(({ id, title, Icon }) => (
+          <a
+            href={'#' + id}
+            class='section_link nav_item md:flex-row-reverse group'
+            aria-label={id}
+          >
+            <Icon />
+            <p class='md:whitespace-nowrap md:py-3 transition md:scale-0 md:group-hover:scale-100 md:origin-bottom-right md:absolute md:right-full'>
+              {title}
+            </p>
+          </a>
+        ))
+      }
+      <a
+        href={'mailto:jr.ramirez.varon@gmail.com'}
+        class='nav_item md:flex-row-reverse group'
       >
-         <BurgerMenu id='burger' />
-      </span>
-      <nav
-         id='nav-bar'
-         class='scale-0 lg:scale-100 origin-top-right absolute top-14 right-8 lg:static flex flex-col items-start lg:items-center text-lg lg:text-base font-medium p-2 lg:p-0 lg:py-3 rounded-lg shadow-lg lg:shadow-none text-gray-600 dark:text-gray-200 bg-white max-lg:dark:bg-slate-900 lg:bg-transparent transition'
-      >
-         {
-            SECTIONS.map(({ link, title, Icon, label }) => (
-               <a
-                  href={link}
-                  class='section_link dark:max-lg:hover:bg-slate-700 max-lg:hover:bg-gray-300 group relative flex lg:flex-row-reverse items-center gap-x-2 p-3 lg:px-5 2xl:p-6 w-full font-semibold rounded-lg lg:hover:text-blue-500 lg:dark:hover:text-blue-400'
-                  aria-label={label}
-               >
-                  <Icon class='transition size-4 lg:size-5 2xl:size-8 lg:group-hover:scale-125' />
-                  <p class='lg:whitespace-nowrap lg:py-3 transition lg:scale-0 lg:group-hover:scale-100 lg:origin-bottom-right lg:absolute lg:right-full'>
-                     {title}
-                  </p>
-               </a>
-            ))
-         }
-         <ThemeToggle
-            class='dark:max-lg:hover:bg-slate-700 max-lg:hover:bg-gray-300 relative flex items-center lg:justify-end w-full rounded-lg lg:hover:text-blue-500 lg:dark:hover:text-blue-400 cursor-pointer'
-            label={t('nav.colorMode')}
-         />
-         <LanguageToggle />
-      </nav>
-   </div>
+        <Contact />
+        <p
+          class='md:whitespace-nowrap md:py-3 transition md:scale-0 md:group-hover:scale-100 md:origin-bottom-right md:absolute md:right-full'
+        >
+          {t('nav.contact')}
+        </p>
+      </a>
+      <ThemeToggle
+        class='nav_item md:justify-end cursor-pointer'
+        label={t('theme.colorMode')}
+      />
+      <LanguageToggle />
+    </nav>
+  </div>
 </header>
 
+<style>
+  .nav_item {
+    @apply relative flex items-center gap-x-2 p-3 md:px-5 2xl:p-6 w-full font-semibold rounded-lg md:hover:text-blue-500 max-md:hover:bg-gray-300;
+    @apply dark:max-md:hover:bg-slate-700 md:dark:hover:text-blue-400;
+
+    svg{
+      @apply transition size-4 md:size-5 2xl:size-8 md:group-hover:scale-125
+    }
+  }
+</style>
+
 <script>
-   const sideNavBtn = document.querySelector('#burger-container');
-   const sideMenu = document.querySelector('#burger');
-   const navBar = document.querySelector('#nav-bar');
-   const themesMenu = document.querySelector('#themes-menu');
+  const sideNavBtn = document.querySelector('#burger-container');
+  const sideMenu = document.querySelector('#burger');
+  const navBar = document.querySelector('#nav-bar');
+  const themesMenu = document.querySelector('#themes-menu');
 
-   sideNavBtn.addEventListener('click', (e) => {
-      e.stopPropagation();
-      sideMenu.classList.toggle('open');
-      navBar.classList.toggle('scale-0');
-      setTimeout(() => {
-         themesMenu.classList.toggle('max-lg:hidden');
-      }, 200);
-   });
+  sideNavBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    sideMenu.classList.toggle('open');
+    navBar.classList.toggle('scale-0');
+    setTimeout(() => {
+      themesMenu.classList.toggle('max-md:hidden');
+    }, 200);
+  });
 
-   document.addEventListener('click', () => {
-      sideMenu.classList.remove('open');
-      navBar.classList.add('scale-0');
-      setTimeout(() => {
-         themesMenu.classList.add('max-lg:hidden');
-      }, 200);
-   });
+  document.addEventListener('click', () => {
+    sideMenu.classList.remove('open');
+    navBar.classList.add('scale-0');
+    setTimeout(() => {
+      themesMenu.classList.add('max-md:hidden');
+    }, 200);
+  });
 </script>
 
 <style>
-   .open {
-      @apply lg:scale-100;
-   }
-   #burger-container {
-      animation: nav-shadown 1s linear both;
-      animation-timeline: scroll();
-      animation-range: 0 100px;
-   }
+  .open {
+    @apply md:scale-100;
+  }
 
-   @keyframes nav-shadown {
-      to {
-         @apply shadow-lg ring-1 backdrop-blur ring-white/10;
-      }
-   }
+  #burger-container {
+    animation: nav-shadown 1s linear both;
+    animation-timeline: scroll();
+    animation-range: 0 100px;
+  }
+
+  @keyframes nav-shadown {
+    to {
+      @apply shadow-lg ring-1 backdrop-blur ring-white/10;
+    }
+  }
 </style>

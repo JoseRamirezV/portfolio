@@ -1,49 +1,48 @@
 ---
+import { getLangFromUrl, useTranslations } from '@/i18n/utils';
 import Moon from '@/icons/Moon.astro';
 import Sun from '@/icons/Sun.astro';
 import System from '@/icons/System.astro';
 
-interface Props {
-  class: string;
-  label: string;
-}
-
 const { class: className, label } = Astro.props;
 
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
 const THEMES = {
-  dark: 'Dark',
-  light: 'Light',
-  system: 'System',
+  dark: t('theme.darkMode'),
+  light: t('theme.lightMode'),
+  system: t('theme.system'),
 };
 ---
 
 <div class={className}>
   <button
     id='theme-menu-btn'
-    class='group relative flex gap-x-2 items-center lg:flex-row-reverse p-3 lg:px-5 2xl:p-6 transition-transform'
+    class='group relative flex gap-x-2 items-center md:flex-row-reverse p-3 md:px-5 2xl:p-6 transition-transform'
   >
     <span
-      class='relative flex *:transition-all *:size-4 lg:*:size-5 2xl:*:size-8'
+      class='relative flex *:transition-all *:size-4 md:*:size-5 2xl:*:size-8'
     >
-      <Moon id='dark-icon' class='theme-icon lg:group-hover:scale-125' />
+      <Moon id='dark-icon' class='theme-icon md:group-hover:scale-125' />
       <Sun
         id='light-icon'
-        class='theme-icon absolute scale-[1.2] lg:group-hover:scale-150'
+        class='theme-icon absolute scale-[1.2] md:group-hover:scale-150'
       />
       <System
         id='system-icon'
-        class='theme-icon absolute lg:group-hover:scale-125'
+        class='theme-icon absolute md:group-hover:scale-125'
       />
     </span>
     <p
       id='mode'
-      class='lg:hidden lg:whitespace-nowrap transition lg:py-3 lg:scale-0 lg:group-hover:scale-100 lg:origin-bottom-right lg:absolute lg:right-full max-sm:pe-2'
+      class='md:hidden md:whitespace-nowrap transition md:py-3 md:scale-0 md:group-hover:scale-100 md:origin-bottom-right md:absolute md:right-full max-sm:pe-2'
     >
       {label}
     </p>
     <ul
       id='themes-menu'
-      class='max-lg:hidden absolute scale-0 lg:group-hover:scale-100 right-full -top-3/4 p-2 max-sm:me-4 transition-all origin-right shadow-[0px_3px_8px_rgb(0,0,0,0.2)] rounded-lg text-gray-900 dark:text-gray-300 bg-white dark:bg-gray-900'
+      class='max-md:hidden absolute scale-0 md:group-hover:scale-100 right-full -top-3/4 p-2 max-sm:me-4 transition-all origin-right shadow-[0px_3px_8px_rgb(0,0,0,0.2)] rounded-lg text-gray-900 dark:text-gray-300 bg-white dark:bg-gray-900'
     >
       {
         Object.entries(THEMES).map(([key, theme]) => (

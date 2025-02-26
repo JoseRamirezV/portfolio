@@ -1,71 +1,75 @@
 ---
 const { category, skills } = Astro.props;
-import Angular from '@/icons/Angular.astro';
 import ChakraUi from '@/icons/ChakraUi.astro';
 import CSS from '@/icons/CSS.astro';
 import Excel from '@/icons/Excel.astro';
 import Express from '@/icons/Express.astro';
+import Git from '@/icons/Git.astro';
 import GitHub from '@/icons/GitHub.astro';
 import HTML from '@/icons/HTML.astro';
 import JavaScript from '@/icons/JavaScript.astro';
+import JWT from '@/icons/JWT.astro';
 import MongoDB from '@/icons/MongoDB.astro';
 import MySQL from '@/icons/MySQL.astro';
+import NextJs from '@/icons/NextJs.astro';
 import NodeJs from '@/icons/NodeJs.astro';
 import Npm from '@/icons/Npm.astro';
 import PHP from '@/icons/PHP.astro';
+import Postman from '@/icons/Postman.astro';
 import React from '@/icons/React.astro';
 import Sass from '@/icons/Sass.astro';
 import Tailwind from '@/icons/Tailwind.astro';
 import VBA from '@/icons/VBA.astro';
 import VSCode from '@/icons/VSCode.astro';
-import Postman from '@/icons/Postman.astro';
-import JWT from '@/icons/JWT.astro';
+import TypeScript from '@/icons/TypeScript.astro';
 
 const ICONS = {
-   Angular,
-   'Chakra-Ui': ChakraUi,
-   CSS,
-   Excel,
-   Express,
-   GitHub,
-   HTML,
-   JavaScript,
-   MongoDB,
-   MySQL,
-   'Node.js': NodeJs,
-   npm: Npm,
-   PHP,
-   React,
-   Sass,
-   Tailwind,
-   VBA,
-   VSCode,
-   Postman,
-   JWT,
+  NextJs,
+  'Chakra-Ui': ChakraUi,
+  CSS,
+  Excel,
+  Express,
+  GitHub,
+  HTML,
+  JavaScript,
+  MongoDB,
+  MySQL,
+  'Node.js': NodeJs,
+  npm: Npm,
+  PHP,
+  React,
+  Sass,
+  Tailwind,
+  VBA,
+  VSCode,
+  Postman,
+  JWT,
+  Git,
+  TypeScript
 };
 ---
 
 <article
-   class='flex flex-col items-center gap-y-4 md:gap-y-8 p-8 xs:p-8 sm:p-10'
+  class='flex flex-col items-center gap-y-4 md:gap-y-8 p-8 xs:p-8 sm:p-10'
 >
-   <h4
-      class='text-transparent bg-clip-text bg-gradient-to-br dark:bg-gradient-to-tl from-sky-600 to-sky-400 text-3xl xs:text-4xl font-bold'
-   >
-      {category}
-   </h4>
-   <ul class=`grid place-content-center grid-cols-3 gap-5 py-3 px-5 w-full`>
-      {
-         skills.map((skill) => {
-            const Icon = ICONS[skill];
-            return (
-               <li class='flex flex-col gap-2 items-center'>
-                  <Icon class='size-8 xs:size-10 sm:max-md:size-12 lg:size-12 text-gray-800 dark:text-white' />
-                  <span class='font-medium max-xs:text-xs max-md:text-sm text-gray-600 dark:text-white text-pretty'>
-                     {skill}
-                  </span>
-               </li>
-            );
-         })
-      }
-   </ul>
+  <h4
+    class='text-transparent bg-clip-text bg-gradient-to-br dark:bg-gradient-to-tl from-sky-600 to-sky-400 text-3xl xs:text-4xl font-bold'
+  >
+    {category}
+  </h4>
+  <ul class=`grid place-content-center grid-cols-3 gap-5 py-3 px-5 w-full`>
+    {
+      skills.map((skill) => {
+        const Icon = ICONS[skill];
+        return (
+          <li class='flex flex-col gap-2 items-center'>
+            <Icon class='size-8 xs:size-10 sm:max-md:size-12 lg:size-12 text-gray-800 dark:text-white' />
+            <span class='font-medium max-xs:text-xs max-md:text-sm text-gray-600 dark:text-white text-pretty'>
+              {skill}
+            </span>
+          </li>
+        );
+      })
+    }
+  </ul>
 </article>

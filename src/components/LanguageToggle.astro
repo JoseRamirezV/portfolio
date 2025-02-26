@@ -1,32 +1,37 @@
 ---
-import { getLangFromUrl, useTranslations } from "@/i18n/utils";
-import { languages } from "@/i18n/ui";
+import { getLangFromUrl } from '@/i18n/utils';
+import { languages } from '@/i18n/ui';
 
 const lang = getLangFromUrl(Astro.url);
-const [link, label] = Object.entries(languages).find(
-  ([language]) => lang !== language
-);
-const t = useTranslations(lang);
+const link = lang === 'es' ? 'en' : 'es';
+const label = languages[link];
+
+const langMessage = lang === 'es' ? 'Go to english version' : 'Ir a version en español'
 ---
 
 <a
-  class="relative flex gap-x-2 items-center p-3 lg:px-5 2xl:p-6 hover:scale-125 lg:hover:text-blue-500 lg:dark:hover:text-blue-400 transition"
-  href={`/${link}`}
+  id='lang'
+  class='relative flex gap-x-2 items-center p-3 md:px-5 2xl:p-6 2xl:text-2xl md:hover:text-blue-500 md:dark:hover:text-blue-400 transition group'
+  href={`/${link}/`}
+  title={`/${link}`}
 >
   <svg
-    xmlns="http://www.w3.org/2000/svg"
-    class="size-4 lg:hidden"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    stroke-width="1.5"
-    stroke="currentColor"
-    fill="none"
-    stroke-linecap="round"
-    stroke-linejoin="round"
-    ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
-      d="M16 3l4 4l-4 4"></path><path d="M10 7l10 0"></path><path
-      d="M8 13l-4 4l4 4"></path><path d="M4 17l9 0"></path></svg
+    xmlns='http://www.w3.org/2000/svg'
+    class='size-4 md:hidden'
+    width='24'
+    height='24'
+    viewBox='0 0 24 24'
+    stroke-width='1.5'
+    stroke='currentColor'
+    fill='none'
+    stroke-linecap='round'
+    stroke-linejoin='round'
+    ><path stroke='none' d='M0 0h24v24H0z' fill='none'></path><path
+      d='M16 3l4 4l-4 4'></path><path d='M10 7l10 0'></path><path
+      d='M8 13l-4 4l4 4'></path><path d='M4 17l9 0'></path></svg
   >
   {label}
+  <p class='max-md:hidden md:whitespace-nowrap md:py-1 md:px-3 rounded-lg transition md:scale-0 md:group-hover:scale-100 md:origin-right md:absolute md:right-full md:text-blue-500 md:dark:text-blue-400 backdrop-blur'>
+    {langMessage}
+  </p>
 </a>

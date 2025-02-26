@@ -7,7 +7,7 @@
     "available": true,
     "phone": "+57 317-377-7044",
     "summary": "System engineer:with good command of the English language and experience working with technologies such as:React, Node.js, MongoDB and MySQL",
-    "resume": "https://drive.google.com/file/d/1CPRUJDYQTVjyj6fz-zU1xe_YlK6O2UC7/view?usp=sharing",
+    "resume": "https://drive.google.com/open?id=10WEAtU8n9RKSF9qNSg2crCDSAO1arvqo&usp=drive_fs",
     "location": {
       "postalCode": "764502",
       "city": "Buenaventura",
@@ -20,7 +20,7 @@
       },
       {
         "language": "English",
-        "fluency": "C2",
+        "fluency": "C1",
         "certificate": "https://cert.efset.org/NF2AEd",
         "organization": "EF Standard English Test (EF SET)"
       }
@@ -99,6 +99,7 @@
       "image": "/projects/TeamFlow.webp",
       "technologies": [
         "ReactJs",
+        "TypeScript",
         "React Router",
         "TailwindCSS",
         "NodeJs",
@@ -106,6 +107,7 @@
         "JWT",
         "MongoDB"
       ],
+      "url": "https://collabtaskmanagerclient.vercel.app/",
       "repository": "https://github.com/JoseRamirezV/collabTaskManager"
     }
   ],
@@ -134,10 +136,11 @@
         "CSS",
         "JavaScript",
         "React",
-        "Angular",
-        "Sass",
+        "NextJs",
+        "TypeScript",
         "Chakra-Ui",
-        "Tailwind"
+        "Tailwind",
+        "Sass"
       ]
     },
     {
@@ -145,23 +148,24 @@
       "skills": [
         "Node.js",
         "Express",
-        "PHP",
-        "MySQL",
+        "JWT",
         "MongoDB",
-        "JWT"
+        "MySQL",
+        "PHP"
       ]
     },
     {
       "category": "Tools",
       "skills": [
         "VSCode",
+        "Git",
         "GitHub",
         "npm",
         "Postman"
       ]
     },
     {
-      "category": "General",
+      "category": "Others",
       "skills": [
         "Excel",
         "VBA"
@@ -171,21 +175,28 @@
   "about": {
     "points": [
       {
-        "content": "My name is Jose Ricardo, although my friends call me pika, I graduated as a Systems Engineer in 2023 from the University of the Pacific. Since then I have continued to provide full technical support in the academic coordination area of OMI Security School.",
+        "content": "My name is Jose Ricardo. I began my journey in the world of software development while studying Systems Engineering, where I discovered my true passion—not just programming, but designing solutions and automating processes to reduce repetitive work and minimize errors.",
         "highlights": [
-          "I graduated as a Systems Engineer in 2023."
+          "designing solutions and automating processes to reduce repetitive work and minimize errors."
         ]
       },
       {
-        "content": "Among my achievements I can highlight that I managed to optimize the performance of multiple local companies that use Excel as their database, using VBA to automate their daily processes.",
+        "content": "Currently, I'm developing projects focused on optimizing process management in work environments where I have had the privilege of collaborating with.",
         "highlights": [
-          "I managed to optimize the performance of multiple local companies"
+          "optimizing process management in work environments"
         ]
       },
       {
-        "content": "In addition, I have experience in web development, and one of my goals is to use this knowledge to improve the websites of local companies where I've been able to detect opportunities for improvement.",
+        "content": "One of my key accomplishments has been enhancing the efficiency of multiple local businesses that rely on Excel as their primary database. Through the use of VBA, I have automated their daily operations, streamlining workflows and significantly boosting productivity.",
         "highlights": [
-          "one of my goals is to use this knowledge to improve the websites of local companies"
+          "I have automated their daily operations, streamlining workflows and significantly boosting productivity."
+        ]
+      },
+      {
+        "content": "As a web developer, my goal is to take these optimizations to the next level. To achieve this, I am conducting an in-depth analysis of the business environment of these local companies, aiming to design a comprehensive system that enables them to manage their processes efficiently and scalably.",
+        "highlights": [
+          "my goal is to take these optimizations to the next level.",
+          "design a comprehensive system that enables them to manage their processes efficiently and scalably."
         ]
       }
     ],

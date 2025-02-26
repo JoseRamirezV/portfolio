@@ -5,7 +5,7 @@ interface Props {
   title?: string;
 }
 
-const { class: className, id, title } = Astro.props;
+const { class: className, title, id } = Astro.props;
 ---
 
 <section
@@ -15,8 +15,8 @@ const { class: className, id, title } = Astro.props;
 >
   {
     title && (
-      <h2 class="flex items-center text-3xl font-semibold gap-x-3 mb-6 text-gray-800 dark:text-white">
-        <slot name="icon" />
+      <h2 class='flex items-center text-3xl font-semibold gap-x-3 mb-6 text-gray-800 dark:text-white'>
+        <slot name='icon' />
         {title}
       </h2>
     )
@@ -24,22 +24,38 @@ const { class: className, id, title } = Astro.props;
   <slot />
 </section>
 <script is:inline>
-  if (matchMedia("(min-width: 640px)").matches) {
-    const sections = document.querySelectorAll("section");
-    const navItems = document.querySelectorAll(".section_link");
+  if (matchMedia('(min-width: 640px)').matches) {
+    const sections = document.querySelectorAll('section');
+    const navItems = document.querySelectorAll('.section_link');
+    const anchor = document.querySelector('#lang');
+    const initialUrl = anchor.getAttribute('href');
 
     const onChange = (entries) => {
+      let newURL;
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
+          if (entry.target.id === 'home') {
+            newURL = initialUrl;
+            if (newURL !== anchor.getAttribute('href')) {
+              anchor.setAttribute('href', newURL);
+            }
+            return;
+          }
           navItems.forEach((item) => {
-            if (item.getAttribute("aria-label") === entry.target.id) {
-              item.classList.add("lg:text-blue-500");
-              item.classList.add("lg:dark:text-blue-400");
-              item.firstElementChild.classList.add("lg:scale-125");
+            if (entry.target.id === item.getAttribute('aria-label')) {
+              newURL = initialUrl + '#' + entry.target.id;
+              if (newURL !== anchor.getAttribute('href')) {
+                anchor.setAttribute('href', newURL);
+              }
+              item.classList.add('md:text-blue-500', 'md:dark:text-blue-400');
+              item.firstElementChild.classList.add('md:scale-125');
             } else {
-              item.classList.remove("lg:text-blue-500");
-              item.classList.remove("lg:dark:text-blue-400");
-              item.firstElementChild.classList.remove("lg:scale-125");
+              item.classList.remove(
+                'md:text-blue-500',
+                'md:dark:text-blue-400'
+              );
+              item.firstElementChild.classList.remove('md:scale-125');
+              newURL = initialUrl;
             }
           });
         }
@@ -48,7 +64,7 @@ const { class: className, id, title } = Astro.props;
 
     const observer = new IntersectionObserver(onChange, {
       root: null,
-      rootMargin: "0px",
+      rootMargin: '0px',
       threshold: 0.4,
     });
 
@@ -58,7 +74,7 @@ const { class: className, id, title } = Astro.props;
 
     // Cleanup function
     document.onvisibilitychange = () => {
-      if (document.visibilityState === "hidden") {
+      if (document.visibilityState === 'hidden') {
         observer.disconnect();
       } else {
         sections.forEach((section) => {

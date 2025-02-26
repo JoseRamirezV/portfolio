@@ -1,6 +1,6 @@
 ---
-import ArrowRight from "@/icons/ArrowRight.astro";
-import Check from "@/icons/Check.astro";
+import ArrowRight from '@/icons/ArrowRight.astro';
+import Check from '@/icons/Check.astro';
 
 const { company, position, url, startDate, endDate, summary, highlights } =
   Astro.props;
@@ -13,48 +13,51 @@ const highlightsContent =
 ---
 
 <span
-  class="absolute flex items-center justify-center size-6 bg-blue-100 rounded-full start-1 dark:ring-gray-900 dark:bg-blue-900"
+  class='absolute flex items-center justify-center size-6 bg-blue-100 rounded-full start-1 dark:ring-gray-900 dark:bg-blue-900'
 >
   <svg
-    class="size-2.5 text-blue-800 dark:text-blue-300"
-    aria-hidden="true"
-    xmlns="http://www.w3.org/2000/svg"
-    fill="currentColor"
-    viewBox="0 0 20 20"
+    xmlns='http://www.w3.org/2000/svg'
+    viewBox='0 0 24 24'
+    fill='currentColor'
+    class='size-3.5 fill-blue-500 dark:fill-blue-300'
   >
     <path
-      d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"
-    ></path>
+      fill-rule='evenodd'
+      d='m11.54 22.351.07.04.028.016a.76.76 0 0 0 .723 0l.028-.015.071-.041a16.975 16.975 0 0 0 1.144-.742 19.58 19.58 0 0 0 2.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 0 0-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 0 0 2.682 2.282 16.975 16.975 0 0 0 1.145.742ZM12 13.5a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z'
+      clip-rule='evenodd'></path>
   </svg>
 </span>
+
 <h3
-  class="flex items-center text-2xl font-bold text-blue-500 dark:text-blue-400"
+  class='flex items-center text-2xl font-bold text-blue-500 dark:text-blue-400'
 >
   {position}
   {
     !endDate && (
-      <span class="bg-blue-100 text-blue-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300 ms-3">
+      <span class='text-sm font-medium me-2 px-2.5 py-0.5 rounded bg-blue-100 dark:bg-blue-950 dark:text-blue-300 text-blue-800 ms-3'>
         Actual
       </span>
     )
   }
 </h3>
-<span class="text-lg font-semibold text-gray-600 dark:text-white">{company}</span>
-<time
-  class="block mt-1 mb-2 text-xs leading-none text-gray-500 dark:text-gray-300"
+<span class='text-lg font-semibold text-gray-600 dark:text-white'
+  >{company}</span
 >
-  {`${startDate} - ${endDate ?? "Presente"}`}
+<time
+  class='block mt-1 mb-2 text-xs leading-none text-gray-500 dark:text-gray-300'
+>
+  {`${startDate} - ${endDate ?? 'Presente'}`}
 </time>
-<p class="pb-2 font-medium text-gray-600 dark:text-white">
+<p class='pb-2 font-medium text-gray-600 dark:text-white'>
   {summary}
   {
     highlightsContent && (
-      <ul class="max-w-2xl text-gray-500 dark:text-gray-200">
+      <ul class='max-w-2xl text-gray-500 dark:text-gray-200'>
         {highlightsContent.map((highlight) => (
-          <li class="flex items-baseline gap-2">
-            <Check class="size-3 text-blue-500 dark:text-blue-400" />
+          <li class='flex items-baseline gap-2'>
+            <Check class='size-3 text-blue-500 dark:text-blue-400' />
             <p
-              class="w-full text-pretty [&>strong]:font-semibold [&>strong]:text-blue-500 dark:[&>strong]:text-blue-400"
+              class='w-full text-pretty [&>strong]:font-semibold [&>strong]:text-blue-500 dark:[&>strong]:text-blue-300'
               set:html={highlight}
             />
           </li>
@@ -67,10 +70,11 @@ const highlightsContent =
   url && (
     <a
       href={url}
-      class="inline-flex items-center gap-1 px-4 py-2 mt-2 text-sm font-semibold text-gray-600 bg-white border border-gray-200 rounded-lg hover:bg-sky-50 hover:text-blue-500 dark:hover:text-white dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-slate-800/60 transition"
+      target='_blank'
+      class='inline-flex items-center gap-1 px-4 py-2 mt-2 text-sm font-semibold text-gray-600 bg-white border border-gray-200 rounded-lg hover:bg-sky-50 hover:text-blue-500 dark:hover:text-white dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-slate-800/60 transition group'
     >
       Empresa
-      <ArrowRight class="size-3 text-blue-500 dark:text-blue-400" />
+      <ArrowRight class='size-3 text-blue-500 dark:text-blue-400 group-hover:translate-x-1 transition-transform' />
     </a>
   )
 }

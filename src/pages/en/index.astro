@@ -17,26 +17,26 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 <Layout
-  title="Portafolio de Ricardo Ramirez - Web developer, React"
+  title="Ricardo Ramirez's Portfolio - Web developer, React"
   description="Ricardo Ramirez, Systems engineer and Full stack developer"
 >
-    <SectionContainer class="py-16 md:py-44">
+    <SectionContainer id="home" class="py-16 md:py-44">
       <Hero basics={basics} />
     </SectionContainer>
     <div class="space-y-24">
-      <SectionContainer id={t("nav.experience")} title={t("nav.experience")}>
+      <SectionContainer id="experience" title={t("nav.experience")}>
         <Briefcase class="size-8 stroke-2" slot="icon" />
         <Experience experience={work} />
       </SectionContainer>
-      <SectionContainer id={t("nav.projects")}title={t("nav.projects")}>
+      <SectionContainer id="projects" title={t("nav.projects")}>
         <Code class="size-8 stroke-2" slot="icon"/>
         <Projects projects={projects}/>
       </SectionContainer>
-      <SectionContainer id={t("nav.skills")}title={t("nav.skills")}>
+      <SectionContainer id="skills" title={t("nav.skills")}>
         <UserCode class="size-8 stroke-2" slot="icon"/>
         <Skills knowledge={knowledge}/>
       </SectionContainer>
-      <SectionContainer id={t("nav.aboutMe").replace(' ', '-')} title={t("nav.aboutMe")}>
+      <SectionContainer id="about-me" title={t("nav.aboutMe")}>
         <UserCheck class="size-8 stroke-2" slot="icon"/>
         <AboutMe about={about}/>
       </SectionContainer>

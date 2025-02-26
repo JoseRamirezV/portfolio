@@ -7,11 +7,11 @@ const t = useTranslations(lang)
 const SECTIONS = [
 {
     title: t("nav.experience"),
-    link: `#${t("nav.experience")}`,
+    link: '#experience',
   },
   {
     title: t("nav.projects"),
-    link: `#${t("nav.projects")}`,
+    link: '#projects',
   },
 {
     title: t("nav.contact"),
@@ -22,7 +22,7 @@ const SECTIONS = [
 
 <div class="flex justify-center px-4 w-full">
   <div
-    class="flex items-center justify-between mt-16 mb-5 font-medium text-sm text-gray-700 dark:text-gray-300 rounded-lg px-6 py-4 bg-gray-100 dark:bg-white/10 w-full max-w-sm sm:max-w-xl md:max-w-2xl lg:max-w-4xl"
+    class="flex max-sm:flex-col-reverse max-sm:gap-2 items-center justify-between w-full max-w-sm sm:max-w-xl md:max-w-2xl lg:max-w-4xl mt-16 mb-5 font-medium text-sm text-gray-700 dark:text-gray-200 rounded-lg px-6 py-4 bg-gray-100 dark:bg-white/10"
   >
     <span>
       {t("footer.basedOn")}
@@ -33,13 +33,13 @@ const SECTIONS = [
         >portfolio.dev</a
       >
     </span>
-    <ul class="flex items-end max-sm:flex-col gap-5">
+    <ul class="flex items-end gap-5">
       {
         SECTIONS.map(({ title, link }) => (
           <li>
             <a
               href={link}
-              class="hover:text-blue-500 hover:underline dark:hover:text-blue-500 transition"
+              class="hover:text-blue-500 hover:underline dark:hover:text-blue-400 transition"
             >
               {title}
             </a>

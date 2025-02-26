@@ -11,12 +11,12 @@ const content = points.map(({ content, highlights }) => {
 ---
 
 <div class="flex flex-col-reverse lg:flex-row gap-8">
-  <div class="flex flex-col gap-5 text-gray-700 dark:text-white">
+  <div class="flex flex-col gap-5 text-gray-700 dark:text-gray-200">
     {
       content.map((point) => (
         <p
           set:html={point}
-          class="[&>strong]:text-blue-500 dark:[&>strong]:text-blue-400 text-pretty"
+          class="[&>strong]:text-blue-500 dark:[&>strong]:text-blue-300 text-pretty"
         />
       ))
     }
@@ -25,8 +25,8 @@ const content = points.map(({ content, highlights }) => {
     image && (
       <img
         src={image}
-        alt="Foto de Jose Ricardo"
-        class="max-w-xs self-center rounded-xl size-56"
+        alt="Foto de Ricardo"
+        class="object-cover self-center rounded-xl h-full w-64 p-1 aspect-square rotate-3 bg-black/20 dark:bg-gray-50/5 ring-1 ring-black/70 dark:ring-white/20"
       />
     )
   }

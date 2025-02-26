@@ -9,6 +9,7 @@ import Express from '@/icons/Express.astro';
 import MongoDB from '@/icons/MongoDB.astro';
 import ReactRouter from '@/icons/ReactRouter.astro';
 import Tailwind from '@/icons/Tailwind.astro';
+import TypeScript from '@/icons/TypeScript.astro';
 
 const { name, status, description, image, technologies, url, repository } =
   Astro.props;
@@ -16,18 +17,40 @@ const { name, status, description, image, technologies, url, repository } =
 const TECH_ICONS = {
   ReactJs: {
     Icon: ReactJs,
-    className: 'bg-gray-100 text-gray-800 dark:text-white dark:bg-zinc-800',
+    className: 'bg-gray-100 dark:bg-zinc-800',
   },
-  'Chakra-Ui': { Icon: ChakraUi, className: 'bg-cyan-600 text-white' },
+  'Chakra-Ui': {
+    Icon: ChakraUi,
+    className: 'bg-gray-100 dark:bg-cyan-950',
+  },
   NodeJs: {
     Icon: NodeJs,
-    className: 'bg-gray-100 text-gray-800 dark:bg-neutral-800 dark:text-white',
+    className: 'bg-gray-100 dark:bg-neutral-800',
   },
-  TailwindCSS: { Icon: Tailwind, className: 'bg-slate-800 text-white' },
-  'React Router': { Icon: ReactRouter, className: 'text-gray-700 bg-white' },
-  JWT: { Icon: JWT, className: 'bg-gray-800 text-white' },
-  Express: { Icon: Express, className: 'bg-gray-800 text-white' },
-  MongoDB: { Icon: MongoDB, className: 'bg-green-600 text-white' },
+  TailwindCSS: {
+    Icon: Tailwind,
+    className: 'bg-gray-100 dark:bg-slate-800',
+  },
+  'React Router': {
+    Icon: ReactRouter,
+    className: 'bg-gray-100 dark:bg-gray-900',
+  },
+  JWT: {
+    Icon: JWT,
+    className: 'bg-gray-100 dark:bg-gray-800',
+  },
+  Express: {
+    Icon: Express,
+    className: 'bg-gray-100 dark:bg-gray-800',
+  },
+  MongoDB: {
+    Icon: MongoDB,
+    className: 'bg-gray-100 dark:bg-green-950',
+  },
+  TypeScript: {
+    Icon: TypeScript,
+    className: 'bg-gray-100 dark:bg-sky-950'
+  }
 };
 ---
 
@@ -45,7 +68,7 @@ const TECH_ICONS = {
   <div class='flex flex-col justify-between gap-y-4 pb-1'>
     <div class='space-y-2'>
       <span class='flex items-center gap-x-4'>
-        <h3 class='text-2xl font-bold text-gray-800 dark:text-gray-300'>
+        <h3 class='text-2xl font-bold text-gray-800 dark:text-gray-100'>
           {name}
         </h3>
         {
@@ -64,8 +87,8 @@ const TECH_ICONS = {
               <li>
                 <span
                   class:list={[
+                    `flex items-center gap-1 px-2.5 py-1 rounded-full font-medium text-xs duration-200 text-gray-800 dark:text-white`,
                     TECH_ICONS[technology].className,
-                    `flex items-center gap-1 px-2.5 py-1 rounded-full font-medium text-xs duration-200`,
                   ]}
                 >
                   <Icon class='size-3.5' />
@@ -77,20 +100,20 @@ const TECH_ICONS = {
         }
       </ul>
       <p
-        class='font-medium pt-2 text-gray-700 dark:text-gray-400 xs:text-balance sm:text-pretty max-sm:pr-3'
+        class='font-medium pt-2 text-gray-700 dark:text-gray-300 xs:text-balance sm:text-pretty max-sm:pr-3'
       >
         {description}
       </p>
     </div>
     <footer
-      class='flex gap-2 text-white *:text-lg *:inline-flex *:gap-2 *:items-center *:bg-gray-800 *:py-1 *:px-3 *:rounded-lg *:border *:border-gray-600 *:font-medium'
+      class='flex gap-2 text-gray-700 dark:text-white *:text-lg *:inline-flex *:gap-2 *:items-center *:py-1 *:px-3 *:rounded-lg *:font-medium'
     >
       {
         repository && (
           <a
             href={repository}
             target='_blank'
-            class='md:hover:bg-gray-700 md:hover:shadow-lg active:bg-black dark:hover:border-transparent transition-all'
+            class='dark:hover:bg-gray-700 hover:bg-gray-100 bg-gray-200 dark:bg-gray-800 ring-1 ring-gray-400 dark:ring-gray-600 hover:ring-transparent transition-all'
           >
             <GitHub class='size-4' />
             GitHub
@@ -102,7 +125,7 @@ const TECH_ICONS = {
           <a
             href={url}
             target='_blank'
-            class='md:hover:bg-gray-700 md:hover:shadow-lg active:bg-black dark:hover:border-transparent transition-all'
+            class='dark:hover:bg-gray-700 hover:bg-gray-100 bg-gray-200 dark:bg-gray-800 ring-1 ring-gray-400 dark:ring-gray-600 hover:ring-transparent transition-all'
           >
             <Link class='size-4' />
             Preview
