@@ -19,7 +19,3 @@ pnpm-debug.log*
 
 # macOS-specific files
 .DS_Store
-
-# templates
-skills card.jpg
-hero.png
