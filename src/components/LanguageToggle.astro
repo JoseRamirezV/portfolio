@@ -1,12 +1,14 @@
 ---
 import { getLangFromUrl } from '@/i18n/utils';
 import { languages } from '@/i18n/ui';
+import Switch from '@/icons/Switch.astro';
 
 const lang = getLangFromUrl(Astro.url);
 const link = lang === 'es' ? 'en' : 'es';
 const label = languages[link];
 
-const langMessage = lang === 'es' ? 'Go to english version' : 'Ir a version en español'
+const langMessage =
+  lang === 'es' ? 'Go to english version' : 'Ir a version en español';
 ---
 
 <a
@@ -15,23 +17,11 @@ const langMessage = lang === 'es' ? 'Go to english version' : 'Ir a version en e
   href={`/${link}/`}
   title={`/${link}`}
 >
-  <svg
-    xmlns='http://www.w3.org/2000/svg'
-    class='size-4 md:hidden'
-    width='24'
-    height='24'
-    viewBox='0 0 24 24'
-    stroke-width='1.5'
-    stroke='currentColor'
-    fill='none'
-    stroke-linecap='round'
-    stroke-linejoin='round'
-    ><path stroke='none' d='M0 0h24v24H0z' fill='none'></path><path
-      d='M16 3l4 4l-4 4'></path><path d='M10 7l10 0'></path><path
-      d='M8 13l-4 4l4 4'></path><path d='M4 17l9 0'></path></svg
-  >
+  <Switch class='size-4 md:hidden' />
   {label}
-  <p class='max-md:hidden md:whitespace-nowrap md:py-1 md:px-3 rounded-lg transition md:scale-0 md:group-hover:scale-100 md:origin-right md:absolute md:right-full md:text-blue-500 md:dark:text-blue-400 backdrop-blur'>
+  <p
+    class='max-md:hidden md:whitespace-nowrap md:py-1 md:px-3 rounded-lg transition md:scale-0 md:group-hover:scale-100 md:origin-right md:absolute md:right-full md:text-blue-500 md:dark:text-blue-400 backdrop-blur'
+  >
     {langMessage}
   </p>
 </a>

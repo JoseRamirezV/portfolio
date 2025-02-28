@@ -51,20 +51,20 @@
       "url": null,
       "startDate": "April 2021",
       "endDate": "December 2023",
-      "summary": "I managed the technological area of this company whose purpose is to educate, train, qualify and certify all the collaborators of the Bonaverense community in the protection of port facilities.",
+      "summary": "I managed the technological area of this company, whose purpose is to educate, train, qualify and certify all the collaborators of the Bonaverense community in the protection of port facilities.",
       "highlights": [
         {
-          "content": "Automated all the processes of creating, modifying and sending files related to the database, minimizing by 90% the time required to comply with the work cycle.",
-          "highlight": "minimizing by 90%"
+          "content": "Automated creating and sending database-related files using Visual Basic for Applications. This reduced course registration time by 75%.",
+          "highlight": "This reduced course registration time by 75%."
         },
         {
-          "content": "Eliminated the risk of falsification of certificates through a weekly multi-port update using an automatically generated spreadsheet with the necessary data from the courses taken.",
-          "highlight": "Eliminated the risk of falsification of certificates"
+          "content": "Developed a weekly update system using Visual Basic for Applications to prevent certificate forgery and ensure certificate authenticity for partners and users.",
+          "highlight": "ensure certificate authenticity for partners and users"
         }
       ]
     },
     {
-      "company": "Centro de entrenamiento para trabajo seguro en alturas CDETSA",
+      "company": "Centro de Entrenamiento para Trabajo Seguro en Alturas CDETSA",
       "position": "IT Support",
       "url": "https://cdetsa.com/",
       "startDate": "June 2022",
@@ -181,7 +181,7 @@
         ]
       },
       {
-        "content": "Currently, I'm developing projects focused on optimizing process management in work environments where I have had the privilege of collaborating with.",
+        "content": "Currently, I'm developing projects focused on optimizing process management in work environments where I've had the privilege of collaborating.",
         "highlights": [
           "optimizing process management in work environments"
         ]

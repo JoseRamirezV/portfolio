@@ -85,17 +85,17 @@
       "summary": "Gestioné el area tecnológica de esta empresa cuyo fin es formar, entrenar, capacitar y certificar a todos los colaboradores de la comunidad Bonaverense en la protección de las instalaciones portuarias.",
       "highlights": [
         {
-          "content": "Automaticé todos los procesos de creación y envío de archivos relacionados con la base de datos minimizando en un 90% el tiempo requerido cumplir con su ciclo laboral",
-          "highlight": "minimizando en un 90%"
+          "content": "Automaticé la creación y envío de archivos relacionados con la base de datos usando Visual Basic for Applications. Esto redujo el tiempo de registro de cursos en un 75%.",
+          "highlight": "Esto redujo el tiempo de registro de cursos en un 75%."
         },
         {
-          "content": "Eliminé el riesgo de falsificación de los certificados mediante una actualización semanal a multiples puertos usando una hoja de calculo generada automáticamente con los datos necesarios de los cursos realizados.",
-          "highlight": "Eliminé el riesgo de falsificación de los certificados"
+          "content": "Desarrollé un sistema de actualización semanal usando Visual Basic for Applications para prevenir la falsificación de certificados, asegurando su autenticidad para socios y usuarios.",
+          "highlight": "asegurando su autenticidad para socios y usuarios"
         }
       ]
     },
     {
-      "company": "Centro de entrenamiento para trabajo seguro en alturas CDETSA",
+      "company": "Centro de Entrenamiento para Trabajo Seguro en Alturas CDETSA",
       "position": "Soporte técnico",
       "url": "https://cdetsa.com/",
       "startDate": "Junio 2022",
